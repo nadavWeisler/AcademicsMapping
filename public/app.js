@@ -68,6 +68,20 @@
 
   annotatePaths(data.root);
 
+  function syncFiltersFromDom() {
+    state.search = els.search.value.trim();
+    state.ifMin = Number(els.ifMin.value) || 0;
+    els.ifLabel.textContent = String(state.ifMin);
+    state.sort = els.sort.value;
+    state.quartiles = new Set(
+      [...document.querySelectorAll("#quartile-filters input:checked")].map(
+        (el) => el.value
+      )
+    );
+    const pred = document.querySelector('#pred-filters input[name="pred"]:checked');
+    state.predatory = pred ? pred.value : "all";
+  }
+
   function matchesFilters(journal) {
     if (!state.quartiles.has(journal.quartile)) return false;
     if (journal.if < state.ifMin) return false;
@@ -198,6 +212,7 @@
   const globalMaxIf = maxIfInData();
 
   function renderJournals() {
+    syncFiltersFromDom();
     const node = currentNode();
     const all = collectJournals(node);
     const filtered = sortJournals(all.filter(matchesFilters));
