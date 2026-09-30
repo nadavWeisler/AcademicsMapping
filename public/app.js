@@ -393,6 +393,11 @@
       els.ifLabel.textContent = String(state.ifMin);
       renderJournals();
     });
+    els.ifMin.addEventListener("change", () => {
+      state.ifMin = Number(els.ifMin.value);
+      els.ifLabel.textContent = String(state.ifMin);
+      renderJournals();
+    });
 
     els.sort.addEventListener("change", () => {
       state.sort = els.sort.value;
