@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="ATLAS — interactive infographics for academic journal impact factors, quartiles, predatory flags, and deep domain drill-down."
+    />
+    <title>ATLAS — Academic Journal Status</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700;9..144,800&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#explore">Skip to explorer</a>
+
+    <header class="site-header">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-name">ATLAS</span>
+      </div>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="#explore">Explore</a>
+        <a href="#legend">Legend</a>
+        <a href="#health">Domain health</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-brand">
+        <div class="hero-visual" aria-hidden="true">
+          <canvas id="hero-canvas"></canvas>
+          <div class="hero-wash"></div>
+        </div>
+        <div class="hero-content">
+          <p class="brand-lockup" id="hero-brand">ATLAS</p>
+          <h1>Journals mapped by where they actually sit.</h1>
+          <p class="hero-lede">
+            Drill into domains, compare impact factors and quartiles, and spot
+            predatory outlets before you submit.
+          </p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#explore">Explore domains</a>
+            <a class="btn btn-ghost" href="#legend">How to read status</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="legend" id="legend" aria-labelledby="legend-title">
+        <div class="section-head">
+          <h2 id="legend-title">Status at a glance</h2>
+          <p>
+            Four signals every researcher needs: impact, quartile, domain fit,
+            and risk.
+          </p>
+        </div>
+        <div class="legend-grid">
+          <article class="signal signal-if">
+            <h3>Impact factor</h3>
+            <p>
+              Average citations to recent articles. Useful for relative standing
+              inside a field—not a quality verdict alone.
+            </p>
+            <div class="if-meter" aria-hidden="true">
+              <span style="--v: 18%"></span>
+              <span style="--v: 42%"></span>
+              <span style="--v: 68%"></span>
+              <span style="--v: 96%"></span>
+            </div>
+          </article>
+          <article class="signal signal-q">
+            <h3>Quartiles</h3>
+            <p>
+              JCR/Scopus rank within a subject category. Q1 is the top 25%; Q4
+              the bottom.
+            </p>
+            <div class="q-stack" aria-hidden="true">
+              <div class="q-bar q1"><span>Q1</span><i></i></div>
+              <div class="q-bar q2"><span>Q2</span><i></i></div>
+              <div class="q-bar q3"><span>Q3</span><i></i></div>
+              <div class="q-bar q4"><span>Q4</span><i></i></div>
+            </div>
+          </article>
+          <article class="signal signal-pred">
+            <h3>Predatory risk</h3>
+            <p>
+              Outlets that mimic legitimate journals—opaque review, fake boards,
+              aggressive solicitation. Treat red flags as stop signs.
+            </p>
+            <ul class="pred-list">
+              <li>Guaranteed acceptance</li>
+              <li>Unclear peer review</li>
+              <li>Fake editorial boards</li>
+            </ul>
+          </article>
+          <article class="signal signal-depth">
+            <h3>Domain depth</h3>
+            <p>
+              Fields nest. A Q2 genetics title can outrank a Q1 mega-journal for
+              your specific sub-niche.
+            </p>
+            <div class="depth-tree" aria-hidden="true">
+              <span>STEM</span>
+              <span>Life Sci</span>
+              <span>Genetics</span>
+              <span>Human</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="explore" id="explore" aria-labelledby="explore-title">
+        <div class="section-head">
+          <h2 id="explore-title">Domain explorer</h2>
+          <p>
+            Click deeper into subdomains. Filter by quartile, impact, or
+            predatory status.
+          </p>
+        </div>
+
+        <div class="explorer-shell">
+          <aside class="explorer-controls" aria-label="Filters">
+            <label class="field">
+              <span>Search journals</span>
+              <input
+                id="search"
+                type="search"
+                placeholder="Name, ISSN, publisher…"
+                autocomplete="off"
+              />
+            </label>
+
+            <fieldset class="field">
+              <legend>Quartile</legend>
+              <div class="chip-row" id="quartile-filters">
+                <label class="chip"
+                  ><input type="checkbox" value="Q1" checked /> Q1</label
+                >
+                <label class="chip"
+                  ><input type="checkbox" value="Q2" checked /> Q2</label
+                >
+                <label class="chip"
+                  ><input type="checkbox" value="Q3" checked /> Q3</label
+                >
+                <label class="chip"
+                  ><input type="checkbox" value="Q4" checked /> Q4</label
+                >
+              </div>
+            </fieldset>
+
+            <label class="field">
+              <span>Min impact factor · <strong id="if-label">0</strong></span>
+              <input
+                id="if-min"
+                type="range"
+                min="0"
+                max="50"
+                step="0.5"
+                value="0"
+              />
+            </label>
+
+            <fieldset class="field">
+              <legend>Predatory</legend>
+              <div class="chip-row" id="pred-filters">
+                <label class="chip"
+                  ><input
+                    type="radio"
+                    name="pred"
+                    value="all"
+                    checked
+                  />
+                  All</label
+                >
+                <label class="chip"
+                  ><input type="radio" name="pred" value="safe" /> Hide
+                  predatory</label
+                >
+                <label class="chip"
+                  ><input type="radio" name="pred" value="only" /> Predators
+                  only</label
+                >
+              </div>
+            </fieldset>
+
+            <div class="stats-card" id="scope-stats" aria-live="polite"></div>
+          </aside>
+
+          <div class="explorer-main">
+            <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"></nav>
+
+            <div class="children-rail" id="children" aria-label="Subdomains"></div>
+
+            <div class="viz-row">
+              <figure class="viz-panel">
+                <figcaption>Quartile mix in scope</figcaption>
+                <div class="donut-wrap">
+                  <canvas id="quartile-chart" width="220" height="220"></canvas>
+                  <div class="donut-center" id="donut-center"></div>
+                </div>
+              </figure>
+              <figure class="viz-panel viz-bars">
+                <figcaption>Impact factor distribution</figcaption>
+                <div id="if-bars" class="if-bars" role="img" aria-label="Impact factor histogram"></div>
+              </figure>
+            </div>
+
+            <div class="journals-head">
+              <h3 id="journals-title">Journals in this domain</h3>
+              <label class="sort-field">
+                Sort
+                <select id="sort">
+                  <option value="if-desc">Impact ↓</option>
+                  <option value="if-asc">Impact ↑</option>
+                  <option value="name">Name</option>
+                  <option value="quartile">Quartile</option>
+                </select>
+              </label>
+            </div>
+            <ul class="journal-list" id="journals"></ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="health" id="health" aria-labelledby="health-title">
+        <div class="section-head">
+          <h2 id="health-title">Domain health</h2>
+          <p>
+            Top-level fields ranked by mean impact and predatory density in this
+            illustrative map.
+          </p>
+        </div>
+        <div class="health-chart" id="health-chart"></div>
+      </section>
+
+      <footer class="site-footer">
+        <p id="disclaimer"></p>
+        <p class="footer-meta">
+          ATLAS · illustrative journal status map · data snapshot
+          <span id="data-updated"></span>
+        </p>
+      </footer>
+    </main>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
