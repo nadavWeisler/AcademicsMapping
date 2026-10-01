@@ -393,7 +393,12 @@
   }
 
   function renderHealth() {
-    const top = data.root.children || [];
+    // Rank field-level domains (one level under major divisions) for a clearer map.
+    const top = [];
+    for (const major of data.root.children || []) {
+      for (const field of major.children || []) top.push(field);
+      if (!major.children?.length) top.push(major);
+    }
     const rows = top.map((node) => {
       const journals = collectJournals(node);
       const mean =
