@@ -879,6 +879,102 @@ section {
   color: var(--alert);
 }
 
+.sources {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.sources-list {
+  max-width: var(--max);
+  margin: 0 auto;
+  display: grid;
+  gap: 0.85rem;
+}
+
+.source-card {
+  padding: 1.1rem 1.2rem;
+  border-left: 3px solid var(--sea);
+  background: rgba(255, 255, 255, 0.72);
+  border-top: 1px solid rgba(12, 36, 51, 0.06);
+  border-right: 1px solid rgba(12, 36, 51, 0.06);
+  border-bottom: 1px solid rgba(12, 36, 51, 0.06);
+  animation: rise 0.45s ease both;
+}
+
+.source-field {
+  margin: 0 0 0.25rem;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--sea-deep);
+}
+
+.source-card h3 {
+  margin: 0 0 0.45rem;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+}
+
+.source-card p {
+  margin: 0 0 0.45rem;
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+}
+
+.source-access {
+  color: var(--ink) !important;
+}
+
+.source-links a {
+  color: var(--cyan);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.source-links a:hover {
+  text-decoration: underline;
+}
+
+.sources-doc {
+  max-width: var(--max);
+  margin: 1.25rem auto 0;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+}
+
+.sources-doc a {
+  color: var(--sea-deep);
+  font-weight: 700;
+}
+
+.journal-sources {
+  margin: 0.55rem 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  align-items: center;
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+}
+
+.journal-sources > span {
+  font-weight: 700;
+  margin-right: 0.15rem;
+}
+
+.source-chip {
+  display: inline-flex;
+  padding: 0.15rem 0.4rem;
+  background: rgba(8, 145, 178, 0.1);
+  color: var(--cyan);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.source-chip:hover {
+  background: rgba(8, 145, 178, 0.18);
+}
+
 .site-footer {
   padding: 2rem clamp(1rem, 4vw, 2rem) 3rem;
   border-top: 1px solid rgba(12, 36, 51, 0.1);

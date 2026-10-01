@@ -33,10 +33,39 @@
     disclaimer: document.getElementById("disclaimer"),
     dataUpdated: document.getElementById("data-updated"),
     heroCanvas: document.getElementById("hero-canvas"),
+    sourcesList: document.getElementById("sources-list"),
+    fetchMethod: document.getElementById("fetch-method"),
   };
 
   els.disclaimer.textContent = data.disclaimer;
   els.dataUpdated.textContent = data.updated;
+
+  const sourceById = new Map((data.sources || []).map((s) => [s.id, s]));
+
+  function renderSources() {
+    if (!els.sourcesList) return;
+    if (data.fetch && els.fetchMethod) {
+      els.fetchMethod.textContent = `${data.fetch.method} Local file: ${data.fetch.localFile}.`;
+    }
+    els.sourcesList.replaceChildren();
+    for (const source of data.sources || []) {
+      const article = document.createElement("article");
+      article.className = "source-card";
+      const links = [`<a href="${escapeHtml(source.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(source.provider)}</a>`];
+      if (source.secondaryUrl) {
+        links.push(
+          `<a href="${escapeHtml(source.secondaryUrl)}" target="_blank" rel="noopener noreferrer">Secondary link</a>`
+        );
+      }
+      article.innerHTML = `
+        <p class="source-field">${escapeHtml(source.field)}</p>
+        <h3>${escapeHtml(source.provider)}</h3>
+        <p>${escapeHtml(source.howWeUse)}</p>
+        <p class="source-access"><strong>Access:</strong> ${escapeHtml(source.access)}</p>
+        <p class="source-links">${links.join(" · ")}</p>`;
+      els.sourcesList.appendChild(article);
+    }
+  }
 
   function currentNode() {
     return state.path[state.path.length - 1];
@@ -246,6 +275,22 @@
       li.className = `journal${journal.predatory ? " is-predatory" : ""}`;
       li.style.animationDelay = `${Math.min(index, 12) * 0.03}s`;
       const pct = Math.min(100, (journal.if / globalMaxIf) * 100);
+      const sourceIds = journal.metricSourceIds?.length
+        ? journal.metricSourceIds
+        : journal.predatory
+          ? ["predatory", "jcr", "jcr-quartile"]
+          : ["jcr", "jcr-quartile"];
+      const sourceChips = sourceIds
+        .map((id) => sourceById.get(id))
+        .filter(Boolean)
+        .map(
+          (s) =>
+            `<a class="source-chip" href="#sources" title="${escapeHtml(s.provider)}">${escapeHtml(
+              s.field
+            )}</a>`
+        )
+        .join("");
+
       li.innerHTML = `
         <div>
           <div class="journal-top">
@@ -258,6 +303,7 @@
             journal.issn
           )} · ${escapeHtml(journal.domainPath || node.name)}</p>
           <p class="journal-focus">${escapeHtml(journal.focus || "")}</p>
+          <p class="journal-sources"><span>Metrics basis:</span> ${sourceChips}</p>
         </div>
         <div class="journal-if">
           <div>
@@ -557,6 +603,7 @@
   }
 
   bindFilters();
+  renderSources();
   renderHealth();
   render();
   initHeroCanvas();

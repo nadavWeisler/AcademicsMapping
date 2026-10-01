@@ -28,6 +28,7 @@
         <a href="#explore">Explore</a>
         <a href="#legend">Legend</a>
         <a href="#health">Domain health</a>
+        <a href="#sources">Sources</a>
       </nav>
     </header>
 
@@ -159,7 +160,7 @@
                 id="if-min"
                 type="range"
                 min="0"
-                max="50"
+                max="100"
                 step="0.5"
                 value="0"
               />
@@ -238,10 +239,25 @@
         <div class="health-chart" id="health-chart"></div>
       </section>
 
+      <section class="sources" id="sources" aria-labelledby="sources-title">
+        <div class="section-head">
+          <h2 id="sources-title">Data sources</h2>
+          <p id="fetch-method">
+            Clear provenance for every metric family—what we load locally vs where
+            you should verify live values.
+          </p>
+        </div>
+        <div class="sources-list" id="sources-list"></div>
+        <p class="sources-doc">
+          Full write-up:
+          <a href="docs/DATA_SOURCES.md">docs/DATA_SOURCES.md</a>
+        </p>
+      </section>
+
       <footer class="site-footer">
         <p id="disclaimer"></p>
         <p class="footer-meta">
-          ATLAS · illustrative journal status map · data snapshot
+          ATLAS · static dataset in <code>data.js</code> · snapshot
           <span id="data-updated"></span>
         </p>
       </footer>
