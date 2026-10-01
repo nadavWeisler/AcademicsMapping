@@ -1,0 +1,6223 @@
+{
+  "upserts": [
+    {
+      "parentId": "medicine",
+      "child": {
+        "id": "dermatology",
+        "name": "Dermatology",
+        "children": [
+          {
+            "id": "general-derm",
+            "name": "General Dermatology",
+            "journals": [
+              {
+                "name": "Journal of the American Academy of Dermatology",
+                "issn": "0190-9622",
+                "if": 12.8,
+                "quartile": "Q1",
+                "predatory": false,
+                "openAccess": false,
+                "publisher": "Elsevier / AAD",
+                "focus": "Dermatology",
+                "metricSourceIds": [
+                  "jcr",
+                  "jcr-quartile"
+                ]
+              },
+              {
+                "name": "British Journal of Dermatology",
+                "issn": "0007-0963",
+                "if": 9.4,
+                "quartile": "Q1",
+                "predatory": false,
+                "openAccess": false,
+                "publisher": "Oxford / BAD",
+                "focus": "Dermatology",
+                "metricSourceIds": [
+                  "jcr",
+                  "jcr-quartile"
+                ]
+              },
+              {
+                "name": "JAMA Dermatology",
+                "issn": "2168-6068",
+                "if": 11.5,
+                "quartile": "Q1",
+                "predatory": false,
+                "openAccess": false,
+                "publisher": "AMA",
+                "focus": "Dermatology",
+                "metricSourceIds": [
+                  "jcr",
+                  "jcr-quartile"
+                ]
+              },
+              {
+                "name": "Journal of Investigative Dermatology",
+                "issn": "0022-202X",
+                "if": 5.5,
+                "quartile": "Q1",
+                "predatory": false,
+                "openAccess": false,
+                "publisher": "Elsevier",
+                "focus": "Skin biology",
+                "metricSourceIds": [
+                  "jcr",
+                  "jcr-quartile"
+                ]
+              },
+              {
+                "name": "Dermatologic Surgery",
+                "issn": "1076-0512",
+                "if": 2.4,
+                "quartile": "Q2",
+                "predatory": false,
+                "openAccess": false,
+                "publisher": "Wolters Kluwer",
+                "focus": "Derm surgery",
+                "metricSourceIds": [
+                  "jcr",
+                  "jcr-quartile"
+                ]
+              },
+              {
+                "name": "Skin Cure Global Open",
+                "issn": "0000-0031",
+                "if": 0.3,
+                "quartile": "Q4",
+                "predatory": true,
+                "openAccess": true,
+                "publisher": "DermFast Press",
+                "focus": "Predatory dermatology OA",
+                "metricSourceIds": [
+                  "predatory",
+                  "jcr",
+                  "jcr-quartile"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "parentId": "medicine",
+      "child": {
+        "id": "ophthalmology",
+        "name": "Ophthalmology",
+        "journals": [
+          {
+            "name": "Ophthalmology",
+            "issn": "0161-6420",
+            "if": 12.1,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Elsevier / AAO",
+            "focus": "Ophthalmology",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "JAMA Ophthalmology",
+            "issn": "2168-6165",
+            "if": 7.4,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "AMA",
+            "focus": "JAMA Ophthalmology",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "American Journal of Ophthalmology",
+            "issn": "0002-9394",
+            "if": 4.5,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Elsevier",
+            "focus": "American Journal of Ophthalmology",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "British Journal of Ophthalmology",
+            "issn": "0007-1161",
+            "if": 3.8,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "BMJ",
+            "focus": "British Journal of Ophthalmology",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Investigative Ophthalmology & Visual Science",
+            "issn": "0146-0404",
+            "if": 3.9,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "ARVO",
+            "focus": "Vision science",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Eye",
+            "issn": "0950-222X",
+            "if": 3.0,
+            "quartile": "Q2",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Springer Nature",
+            "focus": "Eye",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "parentId": "medicine",
+      "child": {
+        "id": "anesthesiology",
+        "name": "Anesthesiology",
+        "journals": [
+          {
+            "name": "Anesthesiology",
+            "issn": "0003-3022",
+            "if": 8.8,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Wolters Kluwer / ASA",
+            "focus": "Anesthesiology",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "British Journal of Anaesthesia",
+            "issn": "0007-0912",
+            "if": 9.1,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Elsevier",
+            "focus": "British Journal of Anaesthesia",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Anesthesia & Analgesia",
+            "issn": "0003-2999",
+            "if": 4.6,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Wolters Kluwer",
+            "focus": "Anesthesia & Analgesia",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "European Journal of Anaesthesiology",
+            "issn": "0265-0215",
+            "if": 3.5,
+            "quartile": "Q2",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Wolters Kluwer",
+            "focus": "European Journal of Anaesthesiology",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Regional Anesthesia & Pain Medicine",
+            "issn": "1098-7339",
+            "if": 4.8,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "BMJ",
+            "focus": "Regional Anesthesia & Pain Medicine",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "parentId": "medicine",
+      "child": {
+        "id": "rheumatology",
+        "name": "Rheumatology",
+        "journals": [
+          {
+            "name": "Annals of the Rheumatic Diseases",
+            "issn": "0003-4967",
+            "if": 20.3,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "BMJ",
+            "focus": "Annals of the Rheumatic Diseases",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Arthritis & Rheumatology",
+            "issn": "2326-5191",
+            "if": 10.9,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Wiley / ACR",
+            "focus": "Arthritis & Rheumatology",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Rheumatology",
+            "issn": "1462-0324",
+            "if": 4.7,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Oxford",
+            "focus": "Rheumatology",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Journal of Rheumatology",
+            "issn": "0315-162X",
+            "if": 3.2,
+            "quartile": "Q2",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Journal of Rheumatology",
+            "focus": "Journal of Rheumatology",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "parentId": "medicine",
+      "child": {
+        "id": "nephrology",
+        "name": "Nephrology",
+        "journals": [
+          {
+            "name": "Journal of the American Society of Nephrology",
+            "issn": "1046-6673",
+            "if": 10.3,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "ASN",
+            "focus": "Journal of the American Society of Nephrology",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Kidney International",
+            "issn": "0085-2538",
+            "if": 14.8,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Elsevier / ISN",
+            "focus": "Kidney International",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Nephrology Dialysis Transplantation",
+            "issn": "0931-0509",
+            "if": 4.8,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Oxford",
+            "focus": "Nephrology Dialysis Transplantation",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "American Journal of Kidney Diseases",
+            "issn": "0272-6386",
+            "if": 8.9,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Elsevier / NKF",
+            "focus": "American Journal of Kidney Diseases",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Clinical Journal of the American Society of Nephrology",
+            "issn": "1555-9041",
+            "if": 8.0,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "ASN",
+            "focus": "Clinical Journal of the American Society of Nephrology",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "parentId": "medicine",
+      "child": {
+        "id": "pulmonology",
+        "name": "Pulmonology & Critical Care",
+        "children": [
+          {
+            "id": "respiratory",
+            "name": "Respiratory Medicine",
+            "journals": [
+              {
+                "name": "American Journal of Respiratory and Critical Care Medicine",
+                "issn": "1073-449X",
+                "if": 19.3,
+                "quartile": "Q1",
+                "predatory": false,
+                "openAccess": false,
+                "publisher": "ATS",
+                "focus": "American Journal of Respiratory and Critical Care Medicine",
+                "metricSourceIds": [
+                  "jcr",
+                  "jcr-quartile"
+                ]
+              },
+              {
+                "name": "European Respiratory Journal",
+                "issn": "0903-1936",
+                "if": 16.6,
+                "quartile": "Q1",
+                "predatory": false,
+                "openAccess": false,
+                "publisher": "ERS",
+                "focus": "European Respiratory Journal",
+                "metricSourceIds": [
+                  "jcr",
+                  "jcr-quartile"
+                ]
+              },
+              {
+                "name": "Chest",
+                "issn": "0012-3692",
+                "if": 8.6,
+                "quartile": "Q1",
+                "predatory": false,
+                "openAccess": false,
+                "publisher": "Elsevier / ACCP",
+                "focus": "Chest",
+                "metricSourceIds": [
+                  "jcr",
+                  "jcr-quartile"
+                ]
+              },
+              {
+                "name": "Thorax",
+                "issn": "0040-6376",
+                "if": 9.0,
+                "quartile": "Q1",
+                "predatory": false,
+                "openAccess": false,
+                "publisher": "BMJ",
+                "focus": "Thorax",
+                "metricSourceIds": [
+                  "jcr",
+                  "jcr-quartile"
+                ]
+              },
+              {
+                "name": "Respiratory Medicine",
+                "issn": "0954-6111",
+                "if": 3.5,
+                "quartile": "Q2",
+                "predatory": false,
+                "openAccess": false,
+                "publisher": "Elsevier",
+                "focus": "Respiratory Medicine",
+                "metricSourceIds": [
+                  "jcr",
+                  "jcr-quartile"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "critical-care",
+            "name": "Critical Care",
+            "journals": [
+              {
+                "name": "Critical Care Medicine",
+                "issn": "0090-3493",
+                "if": 7.7,
+                "quartile": "Q1",
+                "predatory": false,
+                "openAccess": false,
+                "publisher": "Wolters Kluwer / SCCM",
+                "focus": "Critical Care Medicine",
+                "metricSourceIds": [
+                  "jcr",
+                  "jcr-quartile"
+                ]
+              },
+              {
+                "name": "Intensive Care Medicine",
+                "issn": "0342-4642",
+                "if": 27.1,
+                "quartile": "Q1",
+                "predatory": false,
+                "openAccess": false,
+                "publisher": "Springer",
+                "focus": "Intensive Care Medicine",
+                "metricSourceIds": [
+                  "jcr",
+                  "jcr-quartile"
+                ]
+              },
+              {
+                "name": "Critical Care",
+                "issn": "1364-8535",
+                "if": 15.1,
+                "quartile": "Q1",
+                "predatory": false,
+                "openAccess": true,
+                "publisher": "BMC",
+                "focus": "Critical Care",
+                "metricSourceIds": [
+                  "jcr",
+                  "jcr-quartile",
+                  "doaj"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "parentId": "medicine",
+      "child": {
+        "id": "hematology",
+        "name": "Hematology",
+        "journals": [
+          {
+            "name": "Blood",
+            "issn": "0006-4971",
+            "if": 21.0,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "ASH",
+            "focus": "Blood",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Lancet Haematology",
+            "issn": "2352-3026",
+            "if": 24.7,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Elsevier / Lancet",
+            "focus": "Lancet Haematology",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Blood Advances",
+            "issn": "2473-9529",
+            "if": 7.4,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": true,
+            "publisher": "ASH",
+            "focus": "Blood Advances",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile",
+              "doaj"
+            ]
+          },
+          {
+            "name": "British Journal of Haematology",
+            "issn": "0007-1048",
+            "if": 3.9,
+            "quartile": "Q2",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Wiley",
+            "focus": "British Journal of Haematology",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Haematologica",
+            "issn": "0390-6078",
+            "if": 8.2,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": true,
+            "publisher": "Ferrata Storti Foundation",
+            "focus": "Haematologica",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile",
+              "doaj"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "parentId": "medicine",
+      "child": {
+        "id": "urology",
+        "name": "Urology",
+        "journals": [
+          {
+            "name": "European Urology",
+            "issn": "0302-2838",
+            "if": 23.4,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Elsevier",
+            "focus": "European Urology",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Journal of Urology",
+            "issn": "0022-5347",
+            "if": 5.9,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Wolters Kluwer / AUA",
+            "focus": "Journal of Urology",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "BJU International",
+            "issn": "1464-4096",
+            "if": 4.5,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Wiley",
+            "focus": "BJU International",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Urology",
+            "issn": "0090-4295",
+            "if": 2.1,
+            "quartile": "Q2",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Elsevier",
+            "focus": "Urology",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "parentId": "medicine",
+      "child": {
+        "id": "otolaryngology",
+        "name": "Otolaryngology (ENT)",
+        "journals": [
+          {
+            "name": "JAMA Otolaryngology\u2013Head & Neck Surgery",
+            "issn": "2168-618X",
+            "if": 6.1,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "AMA",
+            "focus": "JAMA Otolaryngology\u2013Head & Neck Surgery",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Laryngoscope",
+            "issn": "0023-852X",
+            "if": 2.6,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Wiley",
+            "focus": "Laryngoscope",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Otolaryngology\u2013Head and Neck Surgery",
+            "issn": "0194-5998",
+            "if": 2.9,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "SAGE / AAO-HNS",
+            "focus": "Otolaryngology\u2013Head and Neck Surgery",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Hearing Research",
+            "issn": "0378-5955",
+            "if": 2.5,
+            "quartile": "Q2",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Elsevier",
+            "focus": "Hearing Research",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "parentId": "medicine",
+      "child": {
+        "id": "pathology",
+        "name": "Pathology",
+        "children": [
+          {
+            "id": "anatomic-path",
+            "name": "Anatomic Pathology",
+            "journals": [
+              {
+                "name": "Modern Pathology",
+                "issn": "0893-3952",
+                "if": 7.5,
+                "quartile": "Q1",
+                "predatory": false,
+                "openAccess": false,
+                "publisher": "Elsevier / USCAP",
+                "focus": "Modern Pathology",
+                "metricSourceIds": [
+                  "jcr",
+                  "jcr-quartile"
+                ]
+              },
+              {
+                "name": "American Journal of Surgical Pathology",
+                "issn": "0147-5185",
+                "if": 4.5,
+                "quartile": "Q1",
+                "predatory": false,
+                "openAccess": false,
+                "publisher": "Wolters Kluwer",
+                "focus": "American Journal of Surgical Pathology",
+                "metricSourceIds": [
+                  "jcr",
+                  "jcr-quartile"
+                ]
+              },
+              {
+                "name": "Histopathology",
+                "issn": "0309-0167",
+                "if": 4.9,
+                "quartile": "Q1",
+                "predatory": false,
+                "openAccess": false,
+                "publisher": "Wiley",
+                "focus": "Histopathology",
+                "metricSourceIds": [
+                  "jcr",
+                  "jcr-quartile"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "clinical-path",
+            "name": "Clinical Pathology & Lab Medicine",
+            "journals": [
+              {
+                "name": "Clinical Chemistry",
+                "issn": "0009-9147",
+                "if": 8.3,
+                "quartile": "Q1",
+                "predatory": false,
+                "openAccess": false,
+                "publisher": "Oxford / AACC",
+                "focus": "Clinical Chemistry",
+                "metricSourceIds": [
+                  "jcr",
+                  "jcr-quartile"
+                ]
+              },
+              {
+                "name": "Clinical Chemistry and Laboratory Medicine",
+                "issn": "1434-6621",
+                "if": 3.8,
+                "quartile": "Q2",
+                "predatory": false,
+                "openAccess": false,
+                "publisher": "De Gruyter",
+                "focus": "Clinical Chemistry and Laboratory Medicine",
+                "metricSourceIds": [
+                  "jcr",
+                  "jcr-quartile"
+                ]
+              },
+              {
+                "name": "Archives of Pathology & Laboratory Medicine",
+                "issn": "0003-9985",
+                "if": 3.2,
+                "quartile": "Q2",
+                "predatory": false,
+                "openAccess": false,
+                "publisher": "CAP",
+                "focus": "Archives of Pathology & Laboratory Medicine",
+                "metricSourceIds": [
+                  "jcr",
+                  "jcr-quartile"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "parentId": "medicine",
+      "child": {
+        "id": "immunology-allergy",
+        "name": "Immunology & Allergy (Clinical)",
+        "journals": [
+          {
+            "name": "Journal of Allergy and Clinical Immunology",
+            "issn": "0091-6749",
+            "if": 11.4,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Elsevier",
+            "focus": "Journal of Allergy and Clinical Immunology",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Allergy",
+            "issn": "0105-4538",
+            "if": 12.4,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Wiley",
+            "focus": "Allergy",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Clinical & Experimental Allergy",
+            "issn": "0954-7894",
+            "if": 4.3,
+            "quartile": "Q2",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Wiley",
+            "focus": "Clinical & Experimental Allergy",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Journal of Clinical Immunology",
+            "issn": "0271-9142",
+            "if": 3.8,
+            "quartile": "Q2",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Springer",
+            "focus": "Journal of Clinical Immunology",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "parentId": "medicine",
+      "child": {
+        "id": "family-medicine",
+        "name": "Family & Primary Care Medicine",
+        "journals": [
+          {
+            "name": "Annals of Family Medicine",
+            "issn": "1544-1709",
+            "if": 4.4,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": true,
+            "publisher": "Annals of Family Medicine",
+            "focus": "Annals of Family Medicine",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile",
+              "doaj"
+            ]
+          },
+          {
+            "name": "British Journal of General Practice",
+            "issn": "0960-1644",
+            "if": 4.9,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "RCGP",
+            "focus": "British Journal of General Practice",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Family Practice",
+            "issn": "0263-2136",
+            "if": 2.0,
+            "quartile": "Q2",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Oxford",
+            "focus": "Family Practice",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "BMC Primary Care",
+            "issn": "2731-4553",
+            "if": 2.5,
+            "quartile": "Q2",
+            "predatory": false,
+            "openAccess": true,
+            "publisher": "BMC",
+            "focus": "BMC Primary Care",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile",
+              "doaj"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "parentId": "medicine",
+      "child": {
+        "id": "geriatrics",
+        "name": "Geriatrics & Gerontology",
+        "journals": [
+          {
+            "name": "Journal of the American Geriatrics Society",
+            "issn": "0002-8614",
+            "if": 4.3,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Wiley",
+            "focus": "Journal of the American Geriatrics Society",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Age and Ageing",
+            "issn": "0002-0729",
+            "if": 6.0,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Oxford",
+            "focus": "Age and Ageing",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Journals of Gerontology Series A",
+            "issn": "1079-5006",
+            "if": 4.3,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Oxford",
+            "focus": "Journals of Gerontology Series A",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Gerontology",
+            "issn": "0304-324X",
+            "if": 3.1,
+            "quartile": "Q2",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Karger",
+            "focus": "Gerontology",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "parentId": "medicine",
+      "child": {
+        "id": "diabetes-metabolism",
+        "name": "Diabetes & Metabolism",
+        "journals": [
+          {
+            "name": "Diabetes",
+            "issn": "0012-1797",
+            "if": 6.2,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "ADA",
+            "focus": "Diabetes",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Diabetologia",
+            "issn": "0012-186X",
+            "if": 8.2,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Springer",
+            "focus": "Diabetologia",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Obesity Reviews",
+            "issn": "1467-7881",
+            "if": 7.9,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Wiley",
+            "focus": "Obesity Reviews",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Metabolism-Clinical and Experimental",
+            "issn": "0026-0495",
+            "if": 9.8,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Elsevier",
+            "focus": "Metabolism-Clinical and Experimental",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "parentId": "life",
+      "child": {
+        "id": "neuroscience",
+        "name": "Neuroscience",
+        "children": [
+          {
+            "id": "systems-neuro",
+            "name": "Systems Neuroscience",
+            "journals": [
+              {
+                "name": "Neuron",
+                "issn": "0896-6273",
+                "if": 14.7,
+                "quartile": "Q1",
+                "predatory": false,
+                "openAccess": false,
+                "publisher": "Cell Press",
+                "focus": "Neuron",
+                "metricSourceIds": [
+                  "jcr",
+                  "jcr-quartile"
+                ]
+              },
+              {
+                "name": "Nature Neuroscience",
+                "issn": "1097-6256",
+                "if": 21.2,
+                "quartile": "Q1",
+                "predatory": false,
+                "openAccess": false,
+                "publisher": "Nature Portfolio",
+                "focus": "Nature Neuroscience",
+                "metricSourceIds": [
+                  "jcr",
+                  "jcr-quartile"
+                ]
+              },
+              {
+                "name": "Journal of Neuroscience",
+                "issn": "0270-6474",
+                "if": 4.4,
+                "quartile": "Q1",
+                "predatory": false,
+                "openAccess": false,
+                "publisher": "SfN",
+                "focus": "Journal of Neuroscience",
+                "metricSourceIds": [
+                  "jcr",
+                  "jcr-quartile"
+                ]
+              },
+              {
+                "name": "eLife",
+                "issn": "2050-084X",
+                "if": 6.4,
+                "quartile": "Q1",
+                "predatory": false,
+                "openAccess": true,
+                "publisher": "eLife",
+                "focus": "eLife",
+                "metricSourceIds": [
+                  "jcr",
+                  "jcr-quartile",
+                  "doaj"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "cellular-neuro",
+            "name": "Cellular & Molecular Neuroscience",
+            "journals": [
+              {
+                "name": "Molecular Psychiatry",
+                "issn": "1359-4184",
+                "if": 9.6,
+                "quartile": "Q1",
+                "predatory": false,
+                "openAccess": false,
+                "publisher": "Springer Nature",
+                "focus": "Molecular Psychiatry",
+                "metricSourceIds": [
+                  "jcr",
+                  "jcr-quartile"
+                ]
+              },
+              {
+                "name": "Glia",
+                "issn": "0894-1491",
+                "if": 5.5,
+                "quartile": "Q1",
+                "predatory": false,
+                "openAccess": false,
+                "publisher": "Wiley",
+                "focus": "Glia",
+                "metricSourceIds": [
+                  "jcr",
+                  "jcr-quartile"
+                ]
+              },
+              {
+                "name": "Journal of Neurochemistry",
+                "issn": "0022-3042",
+                "if": 4.2,
+                "quartile": "Q2",
+                "predatory": false,
+                "openAccess": false,
+                "publisher": "Wiley",
+                "focus": "Journal of Neurochemistry",
+                "metricSourceIds": [
+                  "jcr",
+                  "jcr-quartile"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "computational-neuro",
+            "name": "Computational Neuroscience",
+            "journals": [
+              {
+                "name": "PLOS Computational Biology",
+                "issn": "1553-734X",
+                "if": 3.8,
+                "quartile": "Q1",
+                "predatory": false,
+                "openAccess": true,
+                "publisher": "PLOS",
+                "focus": "PLOS Computational Biology",
+                "metricSourceIds": [
+                  "jcr",
+                  "jcr-quartile",
+                  "doaj"
+                ]
+              },
+              {
+                "name": "Journal of Computational Neuroscience",
+                "issn": "0929-5313",
+                "if": 1.5,
+                "quartile": "Q3",
+                "predatory": false,
+                "openAccess": false,
+                "publisher": "Springer",
+                "focus": "Journal of Computational Neuroscience",
+                "metricSourceIds": [
+                  "jcr",
+                  "jcr-quartile"
+                ]
+              },
+              {
+                "name": "Network Neuroscience",
+                "issn": "2472-1751",
+                "if": 3.7,
+                "quartile": "Q1",
+                "predatory": false,
+                "openAccess": true,
+                "publisher": "MIT Press",
+                "focus": "Network Neuroscience",
+                "metricSourceIds": [
+                  "jcr",
+                  "jcr-quartile",
+                  "doaj"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "parentId": "life",
+      "child": {
+        "id": "immunology-basic",
+        "name": "Immunology",
+        "children": [
+          {
+            "id": "basic-immuno",
+            "name": "Basic Immunology",
+            "journals": [
+              {
+                "name": "Nature Immunology",
+                "issn": "1529-2908",
+                "if": 27.7,
+                "quartile": "Q1",
+                "predatory": false,
+                "openAccess": false,
+                "publisher": "Nature Portfolio",
+                "focus": "Nature Immunology",
+                "metricSourceIds": [
+                  "jcr",
+                  "jcr-quartile"
+                ]
+              },
+              {
+                "name": "Immunity",
+                "issn": "1074-7613",
+                "if": 25.5,
+                "quartile": "Q1",
+                "predatory": false,
+                "openAccess": false,
+                "publisher": "Cell Press",
+                "focus": "Immunity",
+                "metricSourceIds": [
+                  "jcr",
+                  "jcr-quartile"
+                ]
+              },
+              {
+                "name": "Journal of Immunology",
+                "issn": "0022-1767",
+                "if": 3.6,
+                "quartile": "Q2",
+                "predatory": false,
+                "openAccess": false,
+                "publisher": "AAI",
+                "focus": "Journal of Immunology",
+                "metricSourceIds": [
+                  "jcr",
+                  "jcr-quartile"
+                ]
+              },
+              {
+                "name": "Frontiers in Immunology",
+                "issn": "1664-3224",
+                "if": 5.7,
+                "quartile": "Q1",
+                "predatory": false,
+                "openAccess": true,
+                "publisher": "Frontiers",
+                "focus": "Frontiers in Immunology",
+                "metricSourceIds": [
+                  "jcr",
+                  "jcr-quartile",
+                  "doaj"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "innate-immunity",
+            "name": "Innate Immunity",
+            "journals": [
+              {
+                "name": "Nature Reviews Immunology",
+                "issn": "1474-1733",
+                "if": 67.5,
+                "quartile": "Q1",
+                "predatory": false,
+                "openAccess": false,
+                "publisher": "Nature Portfolio",
+                "focus": "Nature Reviews Immunology",
+                "metricSourceIds": [
+                  "jcr",
+                  "jcr-quartile"
+                ]
+              },
+              {
+                "name": "Mucosal Immunology",
+                "issn": "1933-0219",
+                "if": 7.2,
+                "quartile": "Q1",
+                "predatory": false,
+                "openAccess": false,
+                "publisher": "Springer Nature",
+                "focus": "Mucosal Immunology",
+                "metricSourceIds": [
+                  "jcr",
+                  "jcr-quartile"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "parentId": "life",
+      "child": {
+        "id": "developmental-bio",
+        "name": "Developmental Biology",
+        "journals": [
+          {
+            "name": "Development",
+            "issn": "0950-1991",
+            "if": 4.6,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Company of Biologists",
+            "focus": "Development",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Developmental Cell",
+            "issn": "1534-5807",
+            "if": 10.7,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Cell Press",
+            "focus": "Developmental Cell",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Developmental Biology",
+            "issn": "0012-1606",
+            "if": 2.1,
+            "quartile": "Q2",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Elsevier",
+            "focus": "Developmental Biology",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Genesis",
+            "issn": "1526-954X",
+            "if": 1.6,
+            "quartile": "Q3",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Wiley",
+            "focus": "Genesis",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "parentId": "life",
+      "child": {
+        "id": "biophysics",
+        "name": "Biophysics",
+        "journals": [
+          {
+            "name": "Biophysical Journal",
+            "issn": "0006-3495",
+            "if": 3.4,
+            "quartile": "Q2",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Cell Press / Biophysical Society",
+            "focus": "Biophysical Journal",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Structure",
+            "issn": "0969-2126",
+            "if": 4.4,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Cell Press",
+            "focus": "Structure",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Journal of Molecular Biology",
+            "issn": "0022-2836",
+            "if": 4.7,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Elsevier",
+            "focus": "Journal of Molecular Biology",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Proteins: Structure, Function, and Bioinformatics",
+            "issn": "0887-3585",
+            "if": 2.8,
+            "quartile": "Q2",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Wiley",
+            "focus": "Proteins: Structure, Function, and Bioinformatics",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "parentId": "life",
+      "child": {
+        "id": "plant-bio",
+        "name": "Plant Biology",
+        "children": [
+          {
+            "id": "botany",
+            "name": "Botany",
+            "journals": [
+              {
+                "name": "New Phytologist",
+                "issn": "0028-646X",
+                "if": 8.3,
+                "quartile": "Q1",
+                "predatory": false,
+                "openAccess": false,
+                "publisher": "Wiley",
+                "focus": "New Phytologist",
+                "metricSourceIds": [
+                  "jcr",
+                  "jcr-quartile"
+                ]
+              },
+              {
+                "name": "Plant Physiology",
+                "issn": "0032-0889",
+                "if": 6.5,
+                "quartile": "Q1",
+                "predatory": false,
+                "openAccess": false,
+                "publisher": "ASPB / Oxford",
+                "focus": "Plant Physiology",
+                "metricSourceIds": [
+                  "jcr",
+                  "jcr-quartile"
+                ]
+              },
+              {
+                "name": "Annals of Botany",
+                "issn": "0305-7364",
+                "if": 3.6,
+                "quartile": "Q1",
+                "predatory": false,
+                "openAccess": false,
+                "publisher": "Oxford",
+                "focus": "Annals of Botany",
+                "metricSourceIds": [
+                  "jcr",
+                  "jcr-quartile"
+                ]
+              },
+              {
+                "name": "American Journal of Botany",
+                "issn": "0002-9122",
+                "if": 2.4,
+                "quartile": "Q2",
+                "predatory": false,
+                "openAccess": false,
+                "publisher": "Wiley / BSA",
+                "focus": "American Journal of Botany",
+                "metricSourceIds": [
+                  "jcr",
+                  "jcr-quartile"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "plant-pathology",
+            "name": "Plant Pathology",
+            "journals": [
+              {
+                "name": "Molecular Plant Pathology",
+                "issn": "1464-6722",
+                "if": 4.7,
+                "quartile": "Q1",
+                "predatory": false,
+                "openAccess": false,
+                "publisher": "Wiley",
+                "focus": "Molecular Plant Pathology",
+                "metricSourceIds": [
+                  "jcr",
+                  "jcr-quartile"
+                ]
+              },
+              {
+                "name": "Plant Pathology",
+                "issn": "0032-0862",
+                "if": 2.6,
+                "quartile": "Q2",
+                "predatory": false,
+                "openAccess": false,
+                "publisher": "Wiley",
+                "focus": "Plant Pathology",
+                "metricSourceIds": [
+                  "jcr",
+                  "jcr-quartile"
+                ]
+              },
+              {
+                "name": "Phytopathology",
+                "issn": "0031-949X",
+                "if": 3.1,
+                "quartile": "Q1",
+                "predatory": false,
+                "openAccess": false,
+                "publisher": "APS",
+                "focus": "Phytopathology",
+                "metricSourceIds": [
+                  "jcr",
+                  "jcr-quartile"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "parentId": "life",
+      "child": {
+        "id": "zoology",
+        "name": "Zoology & Animal Biology",
+        "journals": [
+          {
+            "name": "Journal of Experimental Biology",
+            "issn": "0022-0949",
+            "if": 2.8,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Company of Biologists",
+            "focus": "Journal of Experimental Biology",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Animal Behaviour",
+            "issn": "0003-3472",
+            "if": 2.5,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Elsevier",
+            "focus": "Animal Behaviour",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Journal of Zoology",
+            "issn": "0952-8369",
+            "if": 1.9,
+            "quartile": "Q2",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Wiley / ZSL",
+            "focus": "Journal of Zoology",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Zoological Journal of the Linnean Society",
+            "issn": "0024-4082",
+            "if": 2.5,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Oxford",
+            "focus": "Zoological Journal of the Linnean Society",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "parentId": "life",
+      "child": {
+        "id": "bioinformatics",
+        "name": "Bioinformatics",
+        "journals": [
+          {
+            "name": "Bioinformatics",
+            "issn": "1367-4803",
+            "if": 4.4,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Oxford",
+            "focus": "Bioinformatics",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Nucleic Acids Research",
+            "issn": "0305-1048",
+            "if": 14.9,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": true,
+            "publisher": "Oxford",
+            "focus": "Nucleic Acids Research",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile",
+              "doaj"
+            ]
+          },
+          {
+            "name": "Briefings in Bioinformatics",
+            "issn": "1467-5463",
+            "if": 9.5,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Oxford",
+            "focus": "Briefings in Bioinformatics",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "BMC Bioinformatics",
+            "issn": "1471-2105",
+            "if": 2.9,
+            "quartile": "Q2",
+            "predatory": false,
+            "openAccess": true,
+            "publisher": "BMC",
+            "focus": "BMC Bioinformatics",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile",
+              "doaj"
+            ]
+          },
+          {
+            "name": "Bioinfo Mega Fast Track",
+            "issn": "0000-0032",
+            "if": 0.4,
+            "quartile": "Q4",
+            "predatory": true,
+            "openAccess": true,
+            "publisher": "SeqPublish",
+            "focus": "Predatory bioinformatics OA",
+            "metricSourceIds": [
+              "predatory",
+              "jcr",
+              "jcr-quartile"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "parentId": "chemistry",
+      "child": {
+        "id": "analytical-chem",
+        "name": "Analytical Chemistry",
+        "journals": [
+          {
+            "name": "Analytical Chemistry",
+            "issn": "0003-2700",
+            "if": 6.7,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "ACS",
+            "focus": "Analytical Chemistry",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Analytica Chimica Acta",
+            "issn": "0003-2670",
+            "if": 5.7,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Elsevier",
+            "focus": "Analytica Chimica Acta",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Talanta",
+            "issn": "0039-9140",
+            "if": 5.6,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Elsevier",
+            "focus": "Talanta",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Analyst",
+            "issn": "0003-2654",
+            "if": 3.6,
+            "quartile": "Q2",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "RSC",
+            "focus": "Analyst",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "parentId": "chemistry",
+      "child": {
+        "id": "inorganic-chem",
+        "name": "Inorganic Chemistry",
+        "journals": [
+          {
+            "name": "Inorganic Chemistry",
+            "issn": "0020-1669",
+            "if": 4.3,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "ACS",
+            "focus": "Inorganic Chemistry",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Dalton Transactions",
+            "issn": "1477-9226",
+            "if": 3.5,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "RSC",
+            "focus": "Dalton Transactions",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "European Journal of Inorganic Chemistry",
+            "issn": "1434-1948",
+            "if": 2.2,
+            "quartile": "Q2",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Wiley",
+            "focus": "European Journal of Inorganic Chemistry",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "parentId": "chemistry",
+      "child": {
+        "id": "physical-chem",
+        "name": "Physical Chemistry",
+        "journals": [
+          {
+            "name": "Journal of Physical Chemistry Letters",
+            "issn": "1948-7185",
+            "if": 5.7,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "ACS",
+            "focus": "Journal of Physical Chemistry Letters",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Journal of Physical Chemistry C",
+            "issn": "1932-7447",
+            "if": 3.3,
+            "quartile": "Q2",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "ACS",
+            "focus": "Journal of Physical Chemistry C",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Physical Chemistry Chemical Physics",
+            "issn": "1463-9076",
+            "if": 2.9,
+            "quartile": "Q2",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "RSC",
+            "focus": "Physical Chemistry Chemical Physics",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Journal of Chemical Physics",
+            "issn": "0021-9606",
+            "if": 3.1,
+            "quartile": "Q2",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "AIP",
+            "focus": "Journal of Chemical Physics",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "parentId": "chemistry",
+      "child": {
+        "id": "biochemistry",
+        "name": "Biochemistry",
+        "journals": [
+          {
+            "name": "Journal of Biological Chemistry",
+            "issn": "0021-9258",
+            "if": 4.0,
+            "quartile": "Q2",
+            "predatory": false,
+            "openAccess": true,
+            "publisher": "Elsevier / ASBMB",
+            "focus": "Journal of Biological Chemistry",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile",
+              "doaj"
+            ]
+          },
+          {
+            "name": "Biochemistry",
+            "issn": "0006-2960",
+            "if": 2.9,
+            "quartile": "Q2",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "ACS",
+            "focus": "Biochemistry",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Nature Chemical Biology",
+            "issn": "1552-4450",
+            "if": 12.6,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Nature Portfolio",
+            "focus": "Nature Chemical Biology",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "ACS Chemical Biology",
+            "issn": "1554-8929",
+            "if": 3.5,
+            "quartile": "Q2",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "ACS",
+            "focus": "ACS Chemical Biology",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "parentId": "chemistry",
+      "child": {
+        "id": "green-chem",
+        "name": "Green & Environmental Chemistry",
+        "journals": [
+          {
+            "name": "Green Chemistry",
+            "issn": "1463-9262",
+            "if": 9.3,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "RSC",
+            "focus": "Green Chemistry",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "ChemSusChem",
+            "issn": "1864-5631",
+            "if": 7.5,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Wiley",
+            "focus": "ChemSusChem",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Environmental Science: Nano",
+            "issn": "2051-8153",
+            "if": 5.8,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "RSC",
+            "focus": "Environmental Science: Nano",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "parentId": "physics",
+      "child": {
+        "id": "astrophysics",
+        "name": "Astronomy & Astrophysics",
+        "journals": [
+          {
+            "name": "Astrophysical Journal",
+            "issn": "0004-637X",
+            "if": 4.5,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "IOP / AAS",
+            "focus": "Astrophysical Journal",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Astronomy & Astrophysics",
+            "issn": "0004-6361",
+            "if": 5.4,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "EDP Sciences",
+            "focus": "Astronomy & Astrophysics",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Monthly Notices of the Royal Astronomical Society",
+            "issn": "0035-8711",
+            "if": 4.7,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Oxford / RAS",
+            "focus": "Monthly Notices of the Royal Astronomical Society",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Astronomical Journal",
+            "issn": "0004-6256",
+            "if": 5.1,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "IOP / AAS",
+            "focus": "Astronomical Journal",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Publications of the Astronomical Society of the Pacific",
+            "issn": "0004-6280",
+            "if": 3.3,
+            "quartile": "Q2",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "IOP",
+            "focus": "Publications of the Astronomical Society of the Pacific",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "parentId": "physics",
+      "child": {
+        "id": "quantum",
+        "name": "Quantum Information & Quantum Physics",
+        "journals": [
+          {
+            "name": "PRX Quantum",
+            "issn": "2691-3399",
+            "if": 9.7,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": true,
+            "publisher": "APS",
+            "focus": "PRX Quantum",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile",
+              "doaj"
+            ]
+          },
+          {
+            "name": "Quantum Science Journal",
+            "issn": "2521-327X",
+            "if": 5.4,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": true,
+            "publisher": "Quantum Verein",
+            "focus": "Quantum Science Journal",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile",
+              "doaj"
+            ]
+          },
+          {
+            "name": "Physical Review A",
+            "issn": "2469-9926",
+            "if": 2.9,
+            "quartile": "Q2",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "APS",
+            "focus": "Physical Review A",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "npj Quantum Information",
+            "issn": "2056-6387",
+            "if": 7.6,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": true,
+            "publisher": "Nature Portfolio",
+            "focus": "npj Quantum Information",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile",
+              "doaj"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "parentId": "physics",
+      "child": {
+        "id": "nuclear-physics",
+        "name": "Nuclear Physics",
+        "journals": [
+          {
+            "name": "Physical Review C",
+            "issn": "2469-9985",
+            "if": 3.1,
+            "quartile": "Q2",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "APS",
+            "focus": "Physical Review C",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Nuclear Physics A",
+            "issn": "0375-9474",
+            "if": 1.5,
+            "quartile": "Q3",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Elsevier",
+            "focus": "Nuclear Physics A",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "European Physical Journal A",
+            "issn": "1434-6001",
+            "if": 2.1,
+            "quartile": "Q2",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Springer",
+            "focus": "European Physical Journal A",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "parentId": "physics",
+      "child": {
+        "id": "soft-matter",
+        "name": "Soft Matter & Statistical Physics",
+        "journals": [
+          {
+            "name": "Soft Matter",
+            "issn": "1744-683X",
+            "if": 2.9,
+            "quartile": "Q2",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "RSC",
+            "focus": "Soft Matter",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Physical Review E",
+            "issn": "2470-0045",
+            "if": 2.4,
+            "quartile": "Q2",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "APS",
+            "focus": "Physical Review E",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Journal of Statistical Mechanics",
+            "issn": "1742-5468",
+            "if": 2.2,
+            "quartile": "Q2",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "IOP",
+            "focus": "Journal of Statistical Mechanics",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "parentId": "earth",
+      "child": {
+        "id": "oceanography",
+        "name": "Oceanography",
+        "journals": [
+          {
+            "name": "Journal of Physical Oceanography",
+            "issn": "0022-3670",
+            "if": 3.2,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "AMS",
+            "focus": "Journal of Physical Oceanography",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Journal of Geophysical Research: Oceans",
+            "issn": "2169-9275",
+            "if": 3.1,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "AGU / Wiley",
+            "focus": "Journal of Geophysical Research: Oceans",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Ocean Science",
+            "issn": "1812-0784",
+            "if": 3.3,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": true,
+            "publisher": "Copernicus",
+            "focus": "Ocean Science",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile",
+              "doaj"
+            ]
+          },
+          {
+            "name": "Deep Sea Research Part I",
+            "issn": "0967-0637",
+            "if": 2.5,
+            "quartile": "Q2",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Elsevier",
+            "focus": "Deep Sea Research Part I",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "parentId": "earth",
+      "child": {
+        "id": "atmospheric",
+        "name": "Atmospheric Science",
+        "journals": [
+          {
+            "name": "Journal of the Atmospheric Sciences",
+            "issn": "0022-4928",
+            "if": 3.0,
+            "quartile": "Q2",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "AMS",
+            "focus": "Journal of the Atmospheric Sciences",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Atmospheric Chemistry and Physics",
+            "issn": "1680-7316",
+            "if": 5.7,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": true,
+            "publisher": "Copernicus",
+            "focus": "Atmospheric Chemistry and Physics",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile",
+              "doaj"
+            ]
+          },
+          {
+            "name": "Quarterly Journal of the Royal Meteorological Society",
+            "issn": "0035-9009",
+            "if": 3.7,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Wiley / RMetS",
+            "focus": "Quarterly Journal of the Royal Meteorological Society",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Bulletin of the American Meteorological Society",
+            "issn": "0003-0007",
+            "if": 6.9,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "AMS",
+            "focus": "Bulletin of the American Meteorological Society",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "parentId": "earth",
+      "child": {
+        "id": "geophysics",
+        "name": "Geophysics",
+        "journals": [
+          {
+            "name": "Journal of Geophysical Research: Solid Earth",
+            "issn": "2169-9313",
+            "if": 3.7,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "AGU / Wiley",
+            "focus": "Journal of Geophysical Research: Solid Earth",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Geophysical Research Letters",
+            "issn": "0094-8276",
+            "if": 4.6,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "AGU / Wiley",
+            "focus": "Geophysical Research Letters",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Geophysical Journal International",
+            "issn": "0956-540X",
+            "if": 2.8,
+            "quartile": "Q2",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Oxford",
+            "focus": "Geophysical Journal International",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "parentId": "earth",
+      "child": {
+        "id": "hydrology",
+        "name": "Hydrology",
+        "journals": [
+          {
+            "name": "Water Resources Research",
+            "issn": "0043-1397",
+            "if": 4.6,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "AGU / Wiley",
+            "focus": "Water Resources Research",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Hydrology and Earth System Sciences",
+            "issn": "1027-5606",
+            "if": 5.0,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": true,
+            "publisher": "Copernicus",
+            "focus": "Hydrology and Earth System Sciences",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile",
+              "doaj"
+            ]
+          },
+          {
+            "name": "Journal of Hydrology",
+            "issn": "0022-1694",
+            "if": 5.9,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Elsevier",
+            "focus": "Journal of Hydrology",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "parentId": "earth",
+      "child": {
+        "id": "planetary",
+        "name": "Planetary Science",
+        "journals": [
+          {
+            "name": "Icarus",
+            "issn": "0019-1035",
+            "if": 2.8,
+            "quartile": "Q2",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Elsevier",
+            "focus": "Icarus",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Journal of Geophysical Research: Planets",
+            "issn": "2169-9097",
+            "if": 3.9,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "AGU / Wiley",
+            "focus": "Journal of Geophysical Research: Planets",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Planetary and Space Science",
+            "issn": "0032-0633",
+            "if": 1.8,
+            "quartile": "Q3",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Elsevier",
+            "focus": "Planetary and Space Science",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "parentId": "cs",
+      "child": {
+        "id": "software-eng",
+        "name": "Software Engineering",
+        "journals": [
+          {
+            "name": "IEEE Transactions on Software Engineering",
+            "issn": "0098-5589",
+            "if": 6.5,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "IEEE",
+            "focus": "IEEE Transactions on Software Engineering",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "ACM Transactions on Software Engineering and Methodology",
+            "issn": "1049-331X",
+            "if": 4.4,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "ACM",
+            "focus": "ACM Transactions on Software Engineering and Methodology",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Empirical Software Engineering",
+            "issn": "1382-3256",
+            "if": 3.5,
+            "quartile": "Q2",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Springer",
+            "focus": "Empirical Software Engineering",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Journal of Systems and Software",
+            "issn": "0164-1212",
+            "if": 3.5,
+            "quartile": "Q2",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Elsevier",
+            "focus": "Journal of Systems and Software",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Software Mega Code Open",
+            "issn": "0000-0033",
+            "if": 0.3,
+            "quartile": "Q4",
+            "predatory": true,
+            "openAccess": true,
+            "publisher": "DevPublish",
+            "focus": "Predatory SE OA",
+            "metricSourceIds": [
+              "predatory",
+              "jcr",
+              "jcr-quartile"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "parentId": "cs",
+      "child": {
+        "id": "databases",
+        "name": "Databases & Data Management",
+        "journals": [
+          {
+            "name": "VLDB Journal",
+            "issn": "1066-8888",
+            "if": 4.0,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Springer",
+            "focus": "VLDB Journal",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "ACM Transactions on Database Systems",
+            "issn": "0362-5915",
+            "if": 1.8,
+            "quartile": "Q2",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "ACM",
+            "focus": "ACM Transactions on Database Systems",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Information Systems",
+            "issn": "0306-4379",
+            "if": 3.1,
+            "quartile": "Q2",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Elsevier",
+            "focus": "Information Systems",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Data Mining and Knowledge Discovery",
+            "issn": "1384-5810",
+            "if": 3.8,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Springer",
+            "focus": "Data Mining and Knowledge Discovery",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "parentId": "cs",
+      "child": {
+        "id": "theory-cs",
+        "name": "Theory of Computation",
+        "journals": [
+          {
+            "name": "Journal of the ACM",
+            "issn": "0004-5411",
+            "if": 2.5,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "ACM",
+            "focus": "Journal of the ACM",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "SIAM Journal on Computing",
+            "issn": "0097-5397",
+            "if": 1.6,
+            "quartile": "Q2",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "SIAM",
+            "focus": "SIAM Journal on Computing",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Theoretical Computer Science",
+            "issn": "0304-3975",
+            "if": 1.0,
+            "quartile": "Q3",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Elsevier",
+            "focus": "Theoretical Computer Science",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Algorithmica",
+            "issn": "0178-4617",
+            "if": 0.9,
+            "quartile": "Q3",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Springer",
+            "focus": "Algorithmica",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "parentId": "cs",
+      "child": {
+        "id": "graphics",
+        "name": "Computer Graphics & Visualization",
+        "journals": [
+          {
+            "name": "ACM Transactions on Graphics",
+            "issn": "0730-0301",
+            "if": 4.9,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "ACM",
+            "focus": "ACM Transactions on Graphics",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "IEEE Transactions on Visualization and Computer Graphics",
+            "issn": "1077-2626",
+            "if": 4.7,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "IEEE",
+            "focus": "IEEE Transactions on Visualization and Computer Graphics",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Computer Graphics Forum",
+            "issn": "0167-7055",
+            "if": 2.5,
+            "quartile": "Q2",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Wiley",
+            "focus": "Computer Graphics Forum",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "parentId": "cs",
+      "child": {
+        "id": "robotics",
+        "name": "Robotics",
+        "journals": [
+          {
+            "name": "International Journal of Robotics Research",
+            "issn": "0278-3649",
+            "if": 5.0,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "SAGE",
+            "focus": "International Journal of Robotics Research",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "IEEE Transactions on Robotics",
+            "issn": "1552-3098",
+            "if": 7.8,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "IEEE",
+            "focus": "IEEE Transactions on Robotics",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Autonomous Robots",
+            "issn": "0929-5593",
+            "if": 3.5,
+            "quartile": "Q2",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Springer",
+            "focus": "Autonomous Robots",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Robotics and Autonomous Systems",
+            "issn": "0921-8890",
+            "if": 4.3,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Elsevier",
+            "focus": "Robotics and Autonomous Systems",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "parentId": "cs",
+      "child": {
+        "id": "programming-languages",
+        "name": "Programming Languages",
+        "journals": [
+          {
+            "name": "ACM Transactions on Programming Languages and Systems",
+            "issn": "0164-0925",
+            "if": 1.4,
+            "quartile": "Q2",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "ACM",
+            "focus": "ACM Transactions on Programming Languages and Systems",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Proceedings of the ACM on Programming Languages",
+            "issn": "2475-1421",
+            "if": 1.8,
+            "quartile": "Q2",
+            "predatory": false,
+            "openAccess": true,
+            "publisher": "ACM",
+            "focus": "Proceedings of the ACM on Programming Languages",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile",
+              "doaj"
+            ]
+          },
+          {
+            "name": "Journal of Functional Programming",
+            "issn": "0956-7968",
+            "if": 1.0,
+            "quartile": "Q3",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Cambridge",
+            "focus": "Journal of Functional Programming",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "parentId": "cs",
+      "child": {
+        "id": "information-retrieval",
+        "name": "Information Retrieval & Search",
+        "journals": [
+          {
+            "name": "ACM Transactions on Information Systems",
+            "issn": "1046-8188",
+            "if": 5.0,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "ACM",
+            "focus": "ACM Transactions on Information Systems",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Information Retrieval Journal",
+            "issn": "1386-4564",
+            "if": 1.8,
+            "quartile": "Q3",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Springer",
+            "focus": "Information Retrieval Journal",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Information Processing and Management",
+            "issn": "0306-4573",
+            "if": 7.5,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Elsevier",
+            "focus": "Information Processing and Management",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "parentId": "engineering",
+      "child": {
+        "id": "chemical-eng",
+        "name": "Chemical Engineering",
+        "journals": [
+          {
+            "name": "Chemical Engineering Journal",
+            "issn": "1385-8947",
+            "if": 13.3,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Elsevier",
+            "focus": "Chemical Engineering Journal",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "AIChE Journal",
+            "issn": "0001-1541",
+            "if": 3.5,
+            "quartile": "Q2",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Wiley",
+            "focus": "AIChE Journal",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Industrial & Engineering Chemistry Research",
+            "issn": "0888-5885",
+            "if": 3.8,
+            "quartile": "Q2",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "ACS",
+            "focus": "Industrial & Engineering Chemistry Research",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Chemical Engineering Science",
+            "issn": "0009-2509",
+            "if": 4.1,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Elsevier",
+            "focus": "Chemical Engineering Science",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "parentId": "engineering",
+      "child": {
+        "id": "aerospace",
+        "name": "Aerospace Engineering",
+        "journals": [
+          {
+            "name": "AIAA Journal",
+            "issn": "0001-1452",
+            "if": 2.5,
+            "quartile": "Q2",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "AIAA",
+            "focus": "AIAA Journal",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Journal of Aircraft",
+            "issn": "0021-8669",
+            "if": 1.5,
+            "quartile": "Q3",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "AIAA",
+            "focus": "Journal of Aircraft",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Aerospace Science and Technology",
+            "issn": "1270-9638",
+            "if": 5.0,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Elsevier",
+            "focus": "Aerospace Science and Technology",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Progress in Aerospace Sciences",
+            "issn": "0376-0421",
+            "if": 10.1,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Elsevier",
+            "focus": "Progress in Aerospace Sciences",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "parentId": "engineering",
+      "child": {
+        "id": "industrial-eng",
+        "name": "Industrial & Systems Engineering",
+        "journals": [
+          {
+            "name": "International Journal of Production Economics",
+            "issn": "0925-5273",
+            "if": 9.8,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Elsevier",
+            "focus": "International Journal of Production Economics",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "European Journal of Operational Research",
+            "issn": "0377-2217",
+            "if": 6.0,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Elsevier",
+            "focus": "European Journal of Operational Research",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "IISE Transactions",
+            "issn": "2472-5854",
+            "if": 2.5,
+            "quartile": "Q2",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Taylor & Francis",
+            "focus": "IISE Transactions",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Computers & Industrial Engineering",
+            "issn": "0360-8352",
+            "if": 6.7,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Elsevier",
+            "focus": "Computers & Industrial Engineering",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "parentId": "engineering",
+      "child": {
+        "id": "environmental-eng",
+        "name": "Environmental Engineering",
+        "journals": [
+          {
+            "name": "Water Research",
+            "issn": "0043-1354",
+            "if": 11.4,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Elsevier",
+            "focus": "Water Research",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Journal of Hazardous Materials",
+            "issn": "0304-3894",
+            "if": 12.2,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Elsevier",
+            "focus": "Journal of Hazardous Materials",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Environmental Engineering Science",
+            "issn": "1092-8758",
+            "if": 1.6,
+            "quartile": "Q3",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Mary Ann Liebert",
+            "focus": "Environmental Engineering Science",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "parentId": "engineering",
+      "child": {
+        "id": "nuclear-eng",
+        "name": "Nuclear Engineering",
+        "journals": [
+          {
+            "name": "Nuclear Engineering and Design",
+            "issn": "0029-5493",
+            "if": 1.9,
+            "quartile": "Q2",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Elsevier",
+            "focus": "Nuclear Engineering and Design",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Annals of Nuclear Energy",
+            "issn": "0306-4549",
+            "if": 1.9,
+            "quartile": "Q2",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Elsevier",
+            "focus": "Annals of Nuclear Energy",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Nuclear Science and Engineering",
+            "issn": "0029-5639",
+            "if": 1.2,
+            "quartile": "Q3",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Taylor & Francis / ANS",
+            "focus": "Nuclear Science and Engineering",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "parentId": "stm",
+      "child": {
+        "id": "architecture",
+        "name": "Architecture & Built Environment",
+        "children": [
+          {
+            "id": "architecture-design",
+            "name": "Architecture",
+            "journals": [
+              {
+                "name": "Building and Environment",
+                "issn": "0360-1323",
+                "if": 7.1,
+                "quartile": "Q1",
+                "predatory": false,
+                "openAccess": false,
+                "publisher": "Elsevier",
+                "focus": "Building and Environment",
+                "metricSourceIds": [
+                  "jcr",
+                  "jcr-quartile"
+                ]
+              },
+              {
+                "name": "Journal of Architecture",
+                "issn": "1360-2365",
+                "if": 0.7,
+                "quartile": "Q2",
+                "predatory": false,
+                "openAccess": false,
+                "publisher": "Taylor & Francis",
+                "focus": "Journal of Architecture",
+                "metricSourceIds": [
+                  "jcr",
+                  "jcr-quartile"
+                ]
+              },
+              {
+                "name": "Architectural Science Review",
+                "issn": "0003-8628",
+                "if": 1.8,
+                "quartile": "Q2",
+                "predatory": false,
+                "openAccess": false,
+                "publisher": "Taylor & Francis",
+                "focus": "Architectural Science Review",
+                "metricSourceIds": [
+                  "jcr",
+                  "jcr-quartile"
+                ]
+              },
+              {
+                "name": "Frontiers of Architectural Research",
+                "issn": "2095-2635",
+                "if": 2.9,
+                "quartile": "Q1",
+                "predatory": false,
+                "openAccess": true,
+                "publisher": "KeAi / Elsevier",
+                "focus": "Frontiers of Architectural Research",
+                "metricSourceIds": [
+                  "jcr",
+                  "jcr-quartile",
+                  "doaj"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "urban-planning",
+            "name": "Urban Planning",
+            "journals": [
+              {
+                "name": "Urban Studies",
+                "issn": "0042-0980",
+                "if": 4.2,
+                "quartile": "Q1",
+                "predatory": false,
+                "openAccess": false,
+                "publisher": "SAGE",
+                "focus": "Urban Studies",
+                "metricSourceIds": [
+                  "jcr",
+                  "jcr-quartile"
+                ]
+              },
+              {
+                "name": "Journal of the American Planning Association",
+                "issn": "0194-4363",
+                "if": 3.8,
+                "quartile": "Q1",
+                "predatory": false,
+                "openAccess": false,
+                "publisher": "Taylor & Francis / APA",
+                "focus": "Journal of the American Planning Association",
+                "metricSourceIds": [
+                  "jcr",
+                  "jcr-quartile"
+                ]
+              },
+              {
+                "name": "Cities",
+                "issn": "0264-2751",
+                "if": 6.0,
+                "quartile": "Q1",
+                "predatory": false,
+                "openAccess": false,
+                "publisher": "Elsevier",
+                "focus": "Cities",
+                "metricSourceIds": [
+                  "jcr",
+                  "jcr-quartile"
+                ]
+              },
+              {
+                "name": "Landscape and Urban Planning",
+                "issn": "0169-2046",
+                "if": 7.9,
+                "quartile": "Q1",
+                "predatory": false,
+                "openAccess": false,
+                "publisher": "Elsevier",
+                "focus": "Landscape and Urban Planning",
+                "metricSourceIds": [
+                  "jcr",
+                  "jcr-quartile"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "parentId": "stm",
+      "child": {
+        "id": "sports-science",
+        "name": "Sports Science & Kinesiology",
+        "children": [
+          {
+            "id": "exercise-phys",
+            "name": "Exercise Physiology",
+            "journals": [
+              {
+                "name": "Medicine & Science in Sports & Exercise",
+                "issn": "0195-9131",
+                "if": 4.1,
+                "quartile": "Q1",
+                "predatory": false,
+                "openAccess": false,
+                "publisher": "Wolters Kluwer / ACSM",
+                "focus": "Medicine & Science in Sports & Exercise",
+                "metricSourceIds": [
+                  "jcr",
+                  "jcr-quartile"
+                ]
+              },
+              {
+                "name": "Journal of Applied Physiology",
+                "issn": "8750-7587",
+                "if": 3.3,
+                "quartile": "Q1",
+                "predatory": false,
+                "openAccess": false,
+                "publisher": "APS",
+                "focus": "Journal of Applied Physiology",
+                "metricSourceIds": [
+                  "jcr",
+                  "jcr-quartile"
+                ]
+              },
+              {
+                "name": "European Journal of Applied Physiology",
+                "issn": "1439-6319",
+                "if": 2.8,
+                "quartile": "Q2",
+                "predatory": false,
+                "openAccess": false,
+                "publisher": "Springer",
+                "focus": "European Journal of Applied Physiology",
+                "metricSourceIds": [
+                  "jcr",
+                  "jcr-quartile"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "sport-performance",
+            "name": "Sport Performance",
+            "journals": [
+              {
+                "name": "Sports Medicine",
+                "issn": "0112-1642",
+                "if": 9.3,
+                "quartile": "Q1",
+                "predatory": false,
+                "openAccess": false,
+                "publisher": "Springer",
+                "focus": "Sports Medicine",
+                "metricSourceIds": [
+                  "jcr",
+                  "jcr-quartile"
+                ]
+              },
+              {
+                "name": "Journal of Sports Sciences",
+                "issn": "0264-0414",
+                "if": 2.6,
+                "quartile": "Q2",
+                "predatory": false,
+                "openAccess": false,
+                "publisher": "Taylor & Francis",
+                "focus": "Journal of Sports Sciences",
+                "metricSourceIds": [
+                  "jcr",
+                  "jcr-quartile"
+                ]
+              },
+              {
+                "name": "International Journal of Sports Physiology and Performance",
+                "issn": "1555-0265",
+                "if": 3.2,
+                "quartile": "Q1",
+                "predatory": false,
+                "openAccess": false,
+                "publisher": "Human Kinetics",
+                "focus": "International Journal of Sports Physiology and Performance",
+                "metricSourceIds": [
+                  "jcr",
+                  "jcr-quartile"
+                ]
+              },
+              {
+                "name": "Sport Science Instant OA",
+                "issn": "0000-0034",
+                "if": 0.2,
+                "quartile": "Q4",
+                "predatory": true,
+                "openAccess": true,
+                "publisher": "AthletePublish",
+                "focus": "Predatory sports OA",
+                "metricSourceIds": [
+                  "predatory",
+                  "jcr",
+                  "jcr-quartile"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "parentId": "stm",
+      "child": {
+        "id": "transportation",
+        "name": "Transportation",
+        "journals": [
+          {
+            "name": "Transportation Research Part B: Methodological",
+            "issn": "0191-2615",
+            "if": 6.1,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Elsevier",
+            "focus": "Transportation Research Part B: Methodological",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Transportation Research Part C: Emerging Technologies",
+            "issn": "0968-0900",
+            "if": 7.6,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Elsevier",
+            "focus": "Transportation Research Part C: Emerging Technologies",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Transportation Research Part A: Policy and Practice",
+            "issn": "0965-8564",
+            "if": 6.3,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Elsevier",
+            "focus": "Transportation Research Part A: Policy and Practice",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Journal of Transport Geography",
+            "issn": "0966-6923",
+            "if": 5.7,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Elsevier",
+            "focus": "Journal of Transport Geography",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "IEEE Transactions on Intelligent Transportation Systems",
+            "issn": "1524-9050",
+            "if": 7.9,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "IEEE",
+            "focus": "IEEE Transactions on Intelligent Transportation Systems",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "parentId": "social",
+      "child": {
+        "id": "social-work",
+        "name": "Social Work",
+        "journals": [
+          {
+            "name": "British Journal of Social Work",
+            "issn": "0045-3102",
+            "if": 1.5,
+            "quartile": "Q2",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Oxford",
+            "focus": "British Journal of Social Work",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Social Work",
+            "issn": "0037-8046",
+            "if": 2.3,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Oxford / NASW",
+            "focus": "Social Work",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Child Abuse & Neglect",
+            "issn": "0145-2134",
+            "if": 3.4,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Elsevier",
+            "focus": "Child Abuse & Neglect",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Children and Youth Services Review",
+            "issn": "0190-7409",
+            "if": 2.4,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Elsevier",
+            "focus": "Children and Youth Services Review",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Journal of Social Work",
+            "issn": "1468-0173",
+            "if": 1.6,
+            "quartile": "Q2",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "SAGE",
+            "focus": "Journal of Social Work",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "parentId": "social",
+      "child": {
+        "id": "public-admin",
+        "name": "Public Administration",
+        "journals": [
+          {
+            "name": "Public Administration Review",
+            "issn": "0033-3352",
+            "if": 5.2,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Wiley / ASPA",
+            "focus": "Public Administration Review",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Journal of Public Administration Research and Theory",
+            "issn": "1053-1858",
+            "if": 4.2,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Oxford",
+            "focus": "Journal of Public Administration Research and Theory",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Public Management Review",
+            "issn": "1471-9037",
+            "if": 4.9,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Taylor & Francis",
+            "focus": "Public Management Review",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Governance",
+            "issn": "0952-1895",
+            "if": 2.9,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Wiley",
+            "focus": "Governance",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "parentId": "social",
+      "child": {
+        "id": "demography",
+        "name": "Demography",
+        "journals": [
+          {
+            "name": "Demography",
+            "issn": "0070-3370",
+            "if": 3.0,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Springer / PAA",
+            "focus": "Demography",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Population and Development Review",
+            "issn": "0098-7921",
+            "if": 3.3,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Wiley",
+            "focus": "Population and Development Review",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Population Studies",
+            "issn": "0032-4728",
+            "if": 2.1,
+            "quartile": "Q2",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Taylor & Francis",
+            "focus": "Population Studies",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Demographic Research",
+            "issn": "1435-9871",
+            "if": 1.8,
+            "quartile": "Q2",
+            "predatory": false,
+            "openAccess": true,
+            "publisher": "Max Planck Institute",
+            "focus": "Demographic Research",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile",
+              "doaj"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "parentId": "social",
+      "child": {
+        "id": "library-info",
+        "name": "Library & Information Science",
+        "journals": [
+          {
+            "name": "Journal of the Association for Information Science and Technology",
+            "issn": "2330-1635",
+            "if": 2.4,
+            "quartile": "Q2",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Wiley / ASIS&T",
+            "focus": "Journal of the Association for Information Science and Technology",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Library & Information Science Research",
+            "issn": "0740-8188",
+            "if": 2.3,
+            "quartile": "Q2",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Elsevier",
+            "focus": "Library & Information Science Research",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Journal of Documentation",
+            "issn": "0022-0418",
+            "if": 1.9,
+            "quartile": "Q2",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Emerald",
+            "focus": "Journal of Documentation",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Journal of Academic Librarianship",
+            "issn": "0099-1333",
+            "if": 2.5,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Elsevier",
+            "focus": "Journal of Academic Librarianship",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Scientometrics",
+            "issn": "0138-9130",
+            "if": 3.0,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Springer",
+            "focus": "Scientometrics",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "parentId": "social",
+      "child": {
+        "id": "gender-studies",
+        "name": "Gender & Feminist Studies",
+        "journals": [
+          {
+            "name": "Signs",
+            "issn": "0097-9740",
+            "if": 1.6,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "University of Chicago Press",
+            "focus": "Signs",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Feminist Theory",
+            "issn": "1464-7001",
+            "if": 1.8,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "SAGE",
+            "focus": "Feminist Theory",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Gender & Society",
+            "issn": "0891-2432",
+            "if": 3.0,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "SAGE",
+            "focus": "Gender & Society",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Men and Masculinities",
+            "issn": "1097-184X",
+            "if": 2.0,
+            "quartile": "Q2",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "SAGE",
+            "focus": "Men and Masculinities",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "parentId": "social",
+      "child": {
+        "id": "tourism",
+        "name": "Tourism & Hospitality",
+        "journals": [
+          {
+            "name": "Tourism Management",
+            "issn": "0261-5177",
+            "if": 10.9,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Elsevier",
+            "focus": "Tourism Management",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Annals of Tourism Research",
+            "issn": "0160-7383",
+            "if": 9.1,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Elsevier",
+            "focus": "Annals of Tourism Research",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Journal of Travel Research",
+            "issn": "0047-2875",
+            "if": 7.0,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "SAGE",
+            "focus": "Journal of Travel Research",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "International Journal of Hospitality Management",
+            "issn": "0278-4319",
+            "if": 9.9,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Elsevier",
+            "focus": "International Journal of Hospitality Management",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Tourism Mega Open World",
+            "issn": "0000-0035",
+            "if": 0.3,
+            "quartile": "Q4",
+            "predatory": true,
+            "openAccess": true,
+            "publisher": "TravelFast Journals",
+            "focus": "Predatory tourism OA",
+            "metricSourceIds": [
+              "predatory",
+              "jcr",
+              "jcr-quartile"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "parentId": "social",
+      "child": {
+        "id": "area-studies",
+        "name": "Area & International Studies",
+        "children": [
+          {
+            "id": "asian-studies",
+            "name": "Asian Studies",
+            "journals": [
+              {
+                "name": "Journal of Asian Studies",
+                "issn": "0021-9118",
+                "if": 1.1,
+                "quartile": "Q1",
+                "predatory": false,
+                "openAccess": false,
+                "publisher": "Cambridge / AAS",
+                "focus": "Journal of Asian Studies",
+                "metricSourceIds": [
+                  "jcr",
+                  "jcr-quartile"
+                ]
+              },
+              {
+                "name": "Modern Asian Studies",
+                "issn": "0026-7498",
+                "if": 1.0,
+                "quartile": "Q1",
+                "predatory": false,
+                "openAccess": false,
+                "publisher": "Cambridge",
+                "focus": "Modern Asian Studies",
+                "metricSourceIds": [
+                  "jcr",
+                  "jcr-quartile"
+                ]
+              },
+              {
+                "name": "China Quarterly",
+                "issn": "0305-7410",
+                "if": 2.2,
+                "quartile": "Q1",
+                "predatory": false,
+                "openAccess": false,
+                "publisher": "Cambridge",
+                "focus": "China Quarterly",
+                "metricSourceIds": [
+                  "jcr",
+                  "jcr-quartile"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "african-studies",
+            "name": "African Studies",
+            "journals": [
+              {
+                "name": "African Affairs",
+                "issn": "0001-9909",
+                "if": 2.5,
+                "quartile": "Q1",
+                "predatory": false,
+                "openAccess": false,
+                "publisher": "Oxford",
+                "focus": "African Affairs",
+                "metricSourceIds": [
+                  "jcr",
+                  "jcr-quartile"
+                ]
+              },
+              {
+                "name": "Journal of Modern African Studies",
+                "issn": "0022-278X",
+                "if": 1.1,
+                "quartile": "Q2",
+                "predatory": false,
+                "openAccess": false,
+                "publisher": "Cambridge",
+                "focus": "Journal of Modern African Studies",
+                "metricSourceIds": [
+                  "jcr",
+                  "jcr-quartile"
+                ]
+              },
+              {
+                "name": "Africa",
+                "issn": "0001-9720",
+                "if": 1.2,
+                "quartile": "Q1",
+                "predatory": false,
+                "openAccess": false,
+                "publisher": "Cambridge / IAI",
+                "focus": "Africa",
+                "metricSourceIds": [
+                  "jcr",
+                  "jcr-quartile"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "latin-american-studies",
+            "name": "Latin American Studies",
+            "journals": [
+              {
+                "name": "Latin American Research Review",
+                "issn": "0023-8791",
+                "if": 0.9,
+                "quartile": "Q2",
+                "predatory": false,
+                "openAccess": true,
+                "publisher": "Cambridge / LASA",
+                "focus": "Latin American Research Review",
+                "metricSourceIds": [
+                  "jcr",
+                  "jcr-quartile",
+                  "doaj"
+                ]
+              },
+              {
+                "name": "Journal of Latin American Studies",
+                "issn": "0022-216X",
+                "if": 1.0,
+                "quartile": "Q1",
+                "predatory": false,
+                "openAccess": false,
+                "publisher": "Cambridge",
+                "focus": "Journal of Latin American Studies",
+                "metricSourceIds": [
+                  "jcr",
+                  "jcr-quartile"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "parentId": "psychology",
+      "child": {
+        "id": "personality",
+        "name": "Personality Psychology",
+        "journals": [
+          {
+            "name": "Journal of Personality",
+            "issn": "0022-3506",
+            "if": 3.5,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Wiley",
+            "focus": "Journal of Personality",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "European Journal of Personality",
+            "issn": "0890-2070",
+            "if": 4.1,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "SAGE",
+            "focus": "European Journal of Personality",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Personality and Individual Differences",
+            "issn": "0191-8869",
+            "if": 3.0,
+            "quartile": "Q2",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Elsevier",
+            "focus": "Personality and Individual Differences",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "parentId": "psychology",
+      "child": {
+        "id": "psychometrics",
+        "name": "Psychometrics & Quantitative Methods",
+        "journals": [
+          {
+            "name": "Psychometrika",
+            "issn": "0033-3123",
+            "if": 2.1,
+            "quartile": "Q2",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Springer / Psychometric Society",
+            "focus": "Psychometrika",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Psychological Methods",
+            "issn": "1082-989X",
+            "if": 7.6,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "APA",
+            "focus": "Psychological Methods",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Multivariate Behavioral Research",
+            "issn": "0027-3171",
+            "if": 3.5,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Taylor & Francis",
+            "focus": "Multivariate Behavioral Research",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Behavior Research Methods",
+            "issn": "1554-351X",
+            "if": 4.6,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Springer",
+            "focus": "Behavior Research Methods",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "parentId": "psychology",
+      "child": {
+        "id": "cultural-psych",
+        "name": "Cultural Psychology",
+        "journals": [
+          {
+            "name": "Journal of Cross-Cultural Psychology",
+            "issn": "0022-0221",
+            "if": 2.4,
+            "quartile": "Q2",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "SAGE",
+            "focus": "Journal of Cross-Cultural Psychology",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Culture & Psychology",
+            "issn": "1354-067X",
+            "if": 1.5,
+            "quartile": "Q3",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "SAGE",
+            "focus": "Culture & Psychology",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "parentId": "arts-hum",
+      "child": {
+        "id": "theology",
+        "name": "Religious Studies & Theology",
+        "journals": [
+          {
+            "name": "Journal of the American Academy of Religion",
+            "issn": "0002-7189",
+            "if": 0.7,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Oxford / AAR",
+            "focus": "Journal of the American Academy of Religion",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Religion",
+            "issn": "0048-721X",
+            "if": 0.9,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Taylor & Francis",
+            "focus": "Religion",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Journal of Biblical Literature",
+            "issn": "0021-9231",
+            "if": 0.5,
+            "quartile": "Q2",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "SBL Press",
+            "focus": "Journal of Biblical Literature",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Numen",
+            "issn": "0029-5973",
+            "if": 0.6,
+            "quartile": "Q2",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Brill",
+            "focus": "Numen",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "parentId": "arts-hum",
+      "child": {
+        "id": "film-media",
+        "name": "Film, Television & Media Arts",
+        "journals": [
+          {
+            "name": "Screen",
+            "issn": "0036-9544",
+            "if": 0.7,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Oxford",
+            "focus": "Screen",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Journal of Cinema and Media Studies",
+            "issn": "2578-4900",
+            "if": 0.6,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "University of Texas Press / SCMS",
+            "focus": "Journal of Cinema and Media Studies",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Journal of Film and Video",
+            "issn": "0742-4671",
+            "if": 0.3,
+            "quartile": "Q3",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "University of Illinois Press",
+            "focus": "Journal of Film and Video",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Television & New Media",
+            "issn": "1527-4764",
+            "if": 2.2,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "SAGE",
+            "focus": "Television & New Media",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "parentId": "arts-hum",
+      "child": {
+        "id": "theatre",
+        "name": "Theatre & Performance",
+        "journals": [
+          {
+            "name": "Theatre Journal",
+            "issn": "0192-2882",
+            "if": 0.4,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Johns Hopkins",
+            "focus": "Theatre Journal",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "TDR/The Drama Review",
+            "issn": "1054-2043",
+            "if": 0.3,
+            "quartile": "Q2",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "MIT Press",
+            "focus": "TDR/The Drama Review",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Performance Research",
+            "issn": "1352-8165",
+            "if": 0.4,
+            "quartile": "Q2",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Taylor & Francis",
+            "focus": "Performance Research",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "parentId": "arts-hum",
+      "child": {
+        "id": "classics",
+        "name": "Classics",
+        "journals": [
+          {
+            "name": "Classical Quarterly",
+            "issn": "0009-8388",
+            "if": 0.5,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Cambridge",
+            "focus": "Classical Quarterly",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Journal of Roman Studies",
+            "issn": "0075-4358",
+            "if": 0.9,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Cambridge / Roman Society",
+            "focus": "Journal of Roman Studies",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "American Journal of Philology",
+            "issn": "0002-9475",
+            "if": 0.5,
+            "quartile": "Q2",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Johns Hopkins",
+            "focus": "American Journal of Philology",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "parentId": "arts-hum",
+      "child": {
+        "id": "design",
+        "name": "Design Studies",
+        "journals": [
+          {
+            "name": "Design Studies",
+            "issn": "0142-694X",
+            "if": 3.2,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Elsevier",
+            "focus": "Design Studies",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Design Issues",
+            "issn": "0747-9360",
+            "if": 1.1,
+            "quartile": "Q2",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "MIT Press",
+            "focus": "Design Issues",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "International Journal of Design",
+            "issn": "1991-3761",
+            "if": 1.5,
+            "quartile": "Q2",
+            "predatory": false,
+            "openAccess": true,
+            "publisher": "Chinese Institute of Design",
+            "focus": "International Journal of Design",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile",
+              "doaj"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "parentId": "linguistics",
+      "child": {
+        "id": "applied-linguistics",
+        "name": "Applied Linguistics",
+        "journals": [
+          {
+            "name": "Applied Linguistics",
+            "issn": "0142-6001",
+            "if": 3.6,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Oxford",
+            "focus": "Applied Linguistics",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "TESOL Quarterly",
+            "issn": "0039-8322",
+            "if": 2.7,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Wiley / TESOL",
+            "focus": "TESOL Quarterly",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Language Learning",
+            "issn": "0023-8333",
+            "if": 3.4,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Wiley",
+            "focus": "Language Learning",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Modern Language Journal",
+            "issn": "0026-7902",
+            "if": 3.1,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Wiley",
+            "focus": "Modern Language Journal",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "System",
+            "issn": "0346-251X",
+            "if": 4.9,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Elsevier",
+            "focus": "System",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "parentId": "philosophy",
+      "child": {
+        "id": "ethics",
+        "name": "Ethics",
+        "journals": [
+          {
+            "name": "Ethics",
+            "issn": "0014-1704",
+            "if": 2.1,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "University of Chicago Press",
+            "focus": "Ethics",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Journal of Medical Ethics",
+            "issn": "0306-6800",
+            "if": 3.3,
+            "quartile": "Q1",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "BMJ",
+            "focus": "Journal of Medical Ethics",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          },
+          {
+            "name": "Bioethics",
+            "issn": "0269-9702",
+            "if": 1.9,
+            "quartile": "Q2",
+            "predatory": false,
+            "openAccess": false,
+            "publisher": "Wiley",
+            "focus": "Bioethics",
+            "metricSourceIds": [
+              "jcr",
+              "jcr-quartile"
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "fills": {
+    "virology": [
+      {
+        "name": "Viruses",
+        "issn": "1999-4915",
+        "if": 3.8,
+        "quartile": "Q2",
+        "predatory": false,
+        "openAccess": true,
+        "publisher": "MDPI",
+        "focus": "Viruses",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile",
+          "doaj"
+        ]
+      },
+      {
+        "name": "Journal of General Virology",
+        "issn": "0022-1317",
+        "if": 3.0,
+        "quartile": "Q2",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "Microbiology Society",
+        "focus": "Journal of General Virology",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      }
+    ],
+    "genomics": [
+      {
+        "name": "GigaScience",
+        "issn": "2047-217X",
+        "if": 4.8,
+        "quartile": "Q1",
+        "predatory": false,
+        "openAccess": true,
+        "publisher": "Oxford",
+        "focus": "GigaScience",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile",
+          "doaj"
+        ]
+      },
+      {
+        "name": "Genomics",
+        "issn": "0888-7543",
+        "if": 3.4,
+        "quartile": "Q2",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "Elsevier",
+        "focus": "Genomics",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      }
+    ],
+    "climate": [
+      {
+        "name": "Climate Dynamics",
+        "issn": "0930-7575",
+        "if": 3.8,
+        "quartile": "Q1",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "Springer",
+        "focus": "Climate Dynamics",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      },
+      {
+        "name": "Climatic Change",
+        "issn": "0165-0009",
+        "if": 4.2,
+        "quartile": "Q1",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "Springer",
+        "focus": "Climatic Change",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      },
+      {
+        "name": "Wiley Interdisciplinary Reviews: Climate Change",
+        "issn": "1757-7780",
+        "if": 8.2,
+        "quartile": "Q1",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "Wiley",
+        "focus": "Wiley Interdisciplinary Reviews: Climate Change",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      }
+    ],
+    "organic-chem": [
+      {
+        "name": "Organic & Biomolecular Chemistry",
+        "issn": "1477-0520",
+        "if": 2.9,
+        "quartile": "Q2",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "RSC",
+        "focus": "Organic & Biomolecular Chemistry",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      },
+      {
+        "name": "Tetrahedron",
+        "issn": "0040-4020",
+        "if": 2.1,
+        "quartile": "Q3",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "Elsevier",
+        "focus": "Tetrahedron",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      }
+    ],
+    "materials-chem": [
+      {
+        "name": "Journal of Materials Chemistry A",
+        "issn": "2050-7488",
+        "if": 10.7,
+        "quartile": "Q1",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "RSC",
+        "focus": "Journal of Materials Chemistry A",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      },
+      {
+        "name": "ACS Applied Materials & Interfaces",
+        "issn": "1944-8244",
+        "if": 8.3,
+        "quartile": "Q1",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "ACS",
+        "focus": "ACS Applied Materials & Interfaces",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      }
+    ],
+    "nlp": [
+      {
+        "name": "Natural Language Engineering",
+        "issn": "1351-3249",
+        "if": 1.9,
+        "quartile": "Q2",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "Cambridge",
+        "focus": "Natural Language Engineering",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      },
+      {
+        "name": "Computer Speech & Language",
+        "issn": "0885-2308",
+        "if": 3.1,
+        "quartile": "Q2",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "Elsevier",
+        "focus": "Computer Speech & Language",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      }
+    ],
+    "cv": [
+      {
+        "name": "Computer Vision and Image Understanding",
+        "issn": "1077-3142",
+        "if": 3.7,
+        "quartile": "Q2",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "Elsevier",
+        "focus": "Computer Vision and Image Understanding",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      },
+      {
+        "name": "Pattern Recognition",
+        "issn": "0031-3203",
+        "if": 7.5,
+        "quartile": "Q1",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "Elsevier",
+        "focus": "Pattern Recognition",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      }
+    ],
+    "epidemiology": [
+      {
+        "name": "Epidemiology",
+        "issn": "1044-3983",
+        "if": 4.7,
+        "quartile": "Q1",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "Wolters Kluwer",
+        "focus": "Epidemiology",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      },
+      {
+        "name": "European Journal of Epidemiology",
+        "issn": "0393-2990",
+        "if": 7.7,
+        "quartile": "Q1",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "Springer",
+        "focus": "European Journal of Epidemiology",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      }
+    ],
+    "global-health": [
+      {
+        "name": "BMJ Global Health",
+        "issn": "2059-7908",
+        "if": 5.1,
+        "quartile": "Q1",
+        "predatory": false,
+        "openAccess": true,
+        "publisher": "BMJ",
+        "focus": "BMJ Global Health",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile",
+          "doaj"
+        ]
+      },
+      {
+        "name": "Global Public Health",
+        "issn": "1744-1692",
+        "if": 2.3,
+        "quartile": "Q2",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "Taylor & Francis",
+        "focus": "Global Public Health",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      }
+    ],
+    "medical-oncology": [
+      {
+        "name": "Cancer Discovery",
+        "issn": "2159-8278",
+        "if": 28.2,
+        "quartile": "Q1",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "AACR",
+        "focus": "Cancer Discovery",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      },
+      {
+        "name": "Nature Reviews Cancer",
+        "issn": "1474-175X",
+        "if": 72.5,
+        "quartile": "Q1",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "Nature Portfolio",
+        "focus": "Nature Reviews Cancer",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      },
+      {
+        "name": "Cancer Cell",
+        "issn": "1535-6108",
+        "if": 48.8,
+        "quartile": "Q1",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "Cell Press",
+        "focus": "Cancer Cell",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      }
+    ],
+    "general-cardiology": [
+      {
+        "name": "JACC",
+        "issn": "0735-1097",
+        "if": 21.7,
+        "quartile": "Q1",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "Elsevier / ACC",
+        "focus": "JACC",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      },
+      {
+        "name": "Nature Reviews Cardiology",
+        "issn": "1759-5009",
+        "if": 40.2,
+        "quartile": "Q1",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "Nature Portfolio",
+        "focus": "Nature Reviews Cardiology",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      }
+    ],
+    "general-neurology": [
+      {
+        "name": "Brain",
+        "issn": "0006-8950",
+        "if": 11.9,
+        "quartile": "Q1",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "Oxford",
+        "focus": "Brain",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      },
+      {
+        "name": "Annals of Neurology",
+        "issn": "0364-5134",
+        "if": 8.1,
+        "quartile": "Q1",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "Wiley",
+        "focus": "Annals of Neurology",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      }
+    ],
+    "general-surgery": [
+      {
+        "name": "British Journal of Surgery",
+        "issn": "0007-1323",
+        "if": 8.6,
+        "quartile": "Q1",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "Oxford",
+        "focus": "British Journal of Surgery",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      },
+      {
+        "name": "Surgery",
+        "issn": "0039-6060",
+        "if": 3.5,
+        "quartile": "Q1",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "Elsevier",
+        "focus": "Surgery",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      }
+    ],
+    "diagnostic-radiology": [
+      {
+        "name": "European Journal of Radiology",
+        "issn": "0720-048X",
+        "if": 2.9,
+        "quartile": "Q2",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "Elsevier",
+        "focus": "European Journal of Radiology",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      },
+      {
+        "name": "American Journal of Roentgenology",
+        "issn": "0361-803X",
+        "if": 4.7,
+        "quartile": "Q1",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "ARRS",
+        "focus": "American Journal of Roentgenology",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      }
+    ],
+    "conservation": [
+      {
+        "name": "Conservation Letters",
+        "issn": "1755-263X",
+        "if": 5.4,
+        "quartile": "Q1",
+        "predatory": false,
+        "openAccess": true,
+        "publisher": "Wiley",
+        "focus": "Conservation Letters",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile",
+          "doaj"
+        ]
+      },
+      {
+        "name": "Oryx",
+        "issn": "0030-6053",
+        "if": 2.1,
+        "quartile": "Q2",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "Cambridge",
+        "focus": "Oryx",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      }
+    ],
+    "evolutionary-bio": [
+      {
+        "name": "Journal of Evolutionary Biology",
+        "issn": "1010-061X",
+        "if": 2.1,
+        "quartile": "Q2",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "Wiley",
+        "focus": "Journal of Evolutionary Biology",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      },
+      {
+        "name": "Evolution Letters",
+        "issn": "2056-3744",
+        "if": 3.7,
+        "quartile": "Q1",
+        "predatory": false,
+        "openAccess": true,
+        "publisher": "Oxford",
+        "focus": "Evolution Letters",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile",
+          "doaj"
+        ]
+      }
+    ],
+    "human-genetics": [
+      {
+        "name": "Genome Medicine",
+        "issn": "1756-994X",
+        "if": 10.5,
+        "quartile": "Q1",
+        "predatory": false,
+        "openAccess": true,
+        "publisher": "BMC",
+        "focus": "Genome Medicine",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile",
+          "doaj"
+        ]
+      },
+      {
+        "name": "European Journal of Human Genetics",
+        "issn": "1018-4813",
+        "if": 3.7,
+        "quartile": "Q2",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "Springer Nature",
+        "focus": "European Journal of Human Genetics",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      }
+    ],
+    "finance": [
+      {
+        "name": "Journal of Financial and Quantitative Analysis",
+        "issn": "0022-1090",
+        "if": 3.6,
+        "quartile": "Q1",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "Cambridge",
+        "focus": "Journal of Financial and Quantitative Analysis",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      },
+      {
+        "name": "Review of Finance",
+        "issn": "1572-3097",
+        "if": 4.0,
+        "quartile": "Q1",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "Oxford",
+        "focus": "Review of Finance",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      }
+    ],
+    "strategy": [
+      {
+        "name": "Strategic Entrepreneurship Journal",
+        "issn": "1932-4391",
+        "if": 5.6,
+        "quartile": "Q1",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "Wiley / SMS",
+        "focus": "Strategic Entrepreneurship Journal",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      },
+      {
+        "name": "Long Range Planning",
+        "issn": "0024-6301",
+        "if": 6.3,
+        "quartile": "Q1",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "Elsevier",
+        "focus": "Long Range Planning",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      }
+    ],
+    "ob-hr": [
+      {
+        "name": "Organizational Behavior and Human Decision Processes",
+        "issn": "0749-5978",
+        "if": 3.4,
+        "quartile": "Q1",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "Elsevier",
+        "focus": "Organizational Behavior and Human Decision Processes",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      },
+      {
+        "name": "Human Resource Management Journal",
+        "issn": "0954-5395",
+        "if": 5.1,
+        "quartile": "Q1",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "Wiley",
+        "focus": "Human Resource Management Journal",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      }
+    ],
+    "accounting": [
+      {
+        "name": "Contemporary Accounting Research",
+        "issn": "0823-9150",
+        "if": 3.2,
+        "quartile": "Q1",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "Wiley",
+        "focus": "Contemporary Accounting Research",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      },
+      {
+        "name": "Review of Accounting Studies",
+        "issn": "1380-665X",
+        "if": 3.6,
+        "quartile": "Q1",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "Springer",
+        "focus": "Review of Accounting Studies",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      }
+    ],
+    "comparative-politics": [
+      {
+        "name": "British Journal of Political Science",
+        "issn": "0007-1234",
+        "if": 4.0,
+        "quartile": "Q1",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "Cambridge",
+        "focus": "British Journal of Political Science",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      },
+      {
+        "name": "Political Analysis",
+        "issn": "1047-1987",
+        "if": 4.5,
+        "quartile": "Q1",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "Cambridge",
+        "focus": "Political Analysis",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      }
+    ],
+    "ir": [
+      {
+        "name": "International Security",
+        "issn": "0162-2889",
+        "if": 4.5,
+        "quartile": "Q1",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "MIT Press",
+        "focus": "International Security",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      },
+      {
+        "name": "Security Studies",
+        "issn": "0963-6412",
+        "if": 2.0,
+        "quartile": "Q2",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "Taylor & Francis",
+        "focus": "Security Studies",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      }
+    ],
+    "human-geography": [
+      {
+        "name": "Geoforum",
+        "issn": "0016-7185",
+        "if": 3.4,
+        "quartile": "Q1",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "Elsevier",
+        "focus": "Geoforum",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      },
+      {
+        "name": "Environment and Planning A",
+        "issn": "0308-518X",
+        "if": 3.1,
+        "quartile": "Q1",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "SAGE",
+        "focus": "Environment and Planning A",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      }
+    ],
+    "gis": [
+      {
+        "name": "Cartography and Geographic Information Science",
+        "issn": "1523-0406",
+        "if": 2.0,
+        "quartile": "Q2",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "Taylor & Francis",
+        "focus": "Cartography and Geographic Information Science",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      },
+      {
+        "name": "Transactions in GIS",
+        "issn": "1361-1682",
+        "if": 2.1,
+        "quartile": "Q2",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "Wiley",
+        "focus": "Transactions in GIS",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      }
+    ],
+    "criminology": [
+      {
+        "name": "Justice Quarterly",
+        "issn": "0741-8825",
+        "if": 2.9,
+        "quartile": "Q1",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "Taylor & Francis",
+        "focus": "Justice Quarterly",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      },
+      {
+        "name": "Crime & Delinquency",
+        "issn": "0011-1287",
+        "if": 1.9,
+        "quartile": "Q2",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "SAGE",
+        "focus": "Crime & Delinquency",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      }
+    ],
+    "law-reviews": [
+      {
+        "name": "Stanford Law Review",
+        "issn": "0038-9765",
+        "if": 3.0,
+        "quartile": "Q1",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "Stanford Law Review",
+        "focus": "Stanford Law Review",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      },
+      {
+        "name": "Columbia Law Review",
+        "issn": "0010-1958",
+        "if": 2.8,
+        "quartile": "Q1",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "Columbia Law Review Assn.",
+        "focus": "Columbia Law Review",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      }
+    ],
+    "english-lit": [
+      {
+        "name": "ELH",
+        "issn": "0013-8304",
+        "if": 0.5,
+        "quartile": "Q1",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "Johns Hopkins",
+        "focus": "ELH",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      },
+      {
+        "name": "Critical Inquiry",
+        "issn": "0093-1896",
+        "if": 1.2,
+        "quartile": "Q1",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "University of Chicago Press",
+        "focus": "Critical Inquiry",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      }
+    ],
+    "food-chemistry": [
+      {
+        "name": "Food Research International",
+        "issn": "0963-9969",
+        "if": 7.0,
+        "quartile": "Q1",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "Elsevier",
+        "focus": "Food Research International",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      },
+      {
+        "name": "LWT",
+        "issn": "0023-6438",
+        "if": 6.0,
+        "quartile": "Q1",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "Elsevier",
+        "focus": "LWT",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      }
+    ],
+    "food-safety": [
+      {
+        "name": "Food Microbiology",
+        "issn": "0740-0020",
+        "if": 4.5,
+        "quartile": "Q1",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "Elsevier",
+        "focus": "Food Microbiology",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      },
+      {
+        "name": "Journal of Food Protection",
+        "issn": "0362-028X",
+        "if": 2.2,
+        "quartile": "Q2",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "Elsevier / IAFP",
+        "focus": "Journal of Food Protection",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      }
+    ],
+    "nursing-research": [
+      {
+        "name": "Journal of Clinical Nursing",
+        "issn": "0962-1067",
+        "if": 3.2,
+        "quartile": "Q1",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "Wiley",
+        "focus": "Journal of Clinical Nursing",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      },
+      {
+        "name": "Journal of Nursing Scholarship",
+        "issn": "1527-6546",
+        "if": 2.9,
+        "quartile": "Q1",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "Wiley / STTI",
+        "focus": "Journal of Nursing Scholarship",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      }
+    ],
+    "basic-pharm": [
+      {
+        "name": "Biochemical Pharmacology",
+        "issn": "0006-2952",
+        "if": 4.8,
+        "quartile": "Q1",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "Elsevier",
+        "focus": "Biochemical Pharmacology",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      },
+      {
+        "name": "Pharmacology & Therapeutics",
+        "issn": "0163-7258",
+        "if": 11.7,
+        "quartile": "Q1",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "Elsevier",
+        "focus": "Pharmacology & Therapeutics",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      }
+    ],
+    "clinical-pharm": [
+      {
+        "name": "Clinical Pharmacokinetics",
+        "issn": "0312-5963",
+        "if": 4.5,
+        "quartile": "Q1",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "Springer",
+        "focus": "Clinical Pharmacokinetics",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      },
+      {
+        "name": "European Journal of Clinical Pharmacology",
+        "issn": "0031-6970",
+        "if": 2.3,
+        "quartile": "Q2",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "Springer",
+        "focus": "European Journal of Clinical Pharmacology",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      }
+    ],
+    "general-dentistry": [
+      {
+        "name": "Clinical Oral Investigations",
+        "issn": "1432-6981",
+        "if": 3.1,
+        "quartile": "Q1",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "Springer",
+        "focus": "Clinical Oral Investigations",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      },
+      {
+        "name": "Journal of Oral Rehabilitation",
+        "issn": "0305-182X",
+        "if": 2.5,
+        "quartile": "Q2",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "Wiley",
+        "focus": "Journal of Oral Rehabilitation",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      }
+    ],
+    "vet-clinical": [
+      {
+        "name": "Veterinary Journal",
+        "issn": "1090-0233",
+        "if": 2.1,
+        "quartile": "Q1",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "Elsevier",
+        "focus": "Veterinary Journal",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      },
+      {
+        "name": "Journal of Small Animal Practice",
+        "issn": "0022-4510",
+        "if": 1.5,
+        "quartile": "Q2",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "Wiley",
+        "focus": "Journal of Small Animal Practice",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      }
+    ],
+    "structural-materials": [
+      {
+        "name": "Scripta Materialia",
+        "issn": "1359-6462",
+        "if": 5.3,
+        "quartile": "Q1",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "Elsevier",
+        "focus": "Scripta Materialia",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      },
+      {
+        "name": "Materials & Design",
+        "issn": "0264-1275",
+        "if": 7.6,
+        "quartile": "Q1",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "Elsevier",
+        "focus": "Materials & Design",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      }
+    ],
+    "nanomaterials": [
+      {
+        "name": "Nano Today",
+        "issn": "1748-0132",
+        "if": 16.1,
+        "quartile": "Q1",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "Elsevier",
+        "focus": "Nano Today",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      },
+      {
+        "name": "Small",
+        "issn": "1613-6810",
+        "if": 13.0,
+        "quartile": "Q1",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "Wiley",
+        "focus": "Small",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      }
+    ],
+    "algebra": [
+      {
+        "name": "Advances in Mathematics",
+        "issn": "0001-8708",
+        "if": 1.5,
+        "quartile": "Q1",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "Elsevier",
+        "focus": "Advances in Mathematics",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      },
+      {
+        "name": "Journal of Pure and Applied Algebra",
+        "issn": "0022-4049",
+        "if": 0.8,
+        "quartile": "Q2",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "Elsevier",
+        "focus": "Journal of Pure and Applied Algebra",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      }
+    ],
+    "analysis-math": [
+      {
+        "name": "Inventiones Mathematicae",
+        "issn": "0020-9910",
+        "if": 2.9,
+        "quartile": "Q1",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "Springer",
+        "focus": "Inventiones Mathematicae",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      },
+      {
+        "name": "Duke Mathematical Journal",
+        "issn": "0012-7094",
+        "if": 2.1,
+        "quartile": "Q1",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "Duke",
+        "focus": "Duke Mathematical Journal",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      }
+    ],
+    "theoretical-stats": [
+      {
+        "name": "Bernoulli",
+        "issn": "1350-7265",
+        "if": 1.4,
+        "quartile": "Q2",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "Bernoulli Society",
+        "focus": "Bernoulli",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      },
+      {
+        "name": "Statistical Science",
+        "issn": "0883-4237",
+        "if": 3.0,
+        "quartile": "Q1",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "IMS",
+        "focus": "Statistical Science",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      }
+    ],
+    "applied-stats": [
+      {
+        "name": "Biometrics",
+        "issn": "0006-341X",
+        "if": 1.6,
+        "quartile": "Q2",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "Wiley",
+        "focus": "Biometrics",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      },
+      {
+        "name": "Annals of Applied Statistics",
+        "issn": "1932-6157",
+        "if": 1.6,
+        "quartile": "Q2",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "IMS",
+        "focus": "Annals of Applied Statistics",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      }
+    ],
+    "env-science-general": [
+      {
+        "name": "Environment International",
+        "issn": "0160-4120",
+        "if": 10.3,
+        "quartile": "Q1",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "Elsevier",
+        "focus": "Environment International",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      },
+      {
+        "name": "Journal of Cleaner Production",
+        "issn": "0959-6526",
+        "if": 9.7,
+        "quartile": "Q1",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "Elsevier",
+        "focus": "Journal of Cleaner Production",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      }
+    ],
+    "sustainable-development": [
+      {
+        "name": "Sustainability Science",
+        "issn": "1862-4065",
+        "if": 5.1,
+        "quartile": "Q1",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "Springer",
+        "focus": "Sustainability Science",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      },
+      {
+        "name": "Ecological Economics",
+        "issn": "0921-8009",
+        "if": 5.9,
+        "quartile": "Q1",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "Elsevier",
+        "focus": "Ecological Economics",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      }
+    ],
+    "particle": [
+      {
+        "name": "Physical Review D",
+        "issn": "2470-0010",
+        "if": 5.0,
+        "quartile": "Q1",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "APS",
+        "focus": "Physical Review D",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      },
+      {
+        "name": "European Physical Journal C",
+        "issn": "1434-6044",
+        "if": 4.2,
+        "quartile": "Q1",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "Springer",
+        "focus": "European Physical Journal C",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      }
+    ],
+    "rl": [
+      {
+        "name": "IEEE Transactions on Neural Networks and Learning Systems",
+        "issn": "2162-237X",
+        "if": 10.2,
+        "quartile": "Q1",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "IEEE",
+        "focus": "IEEE Transactions on Neural Networks and Learning Systems",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      },
+      {
+        "name": "Neural Networks",
+        "issn": "0893-6080",
+        "if": 6.0,
+        "quartile": "Q1",
+        "predatory": false,
+        "openAccess": false,
+        "publisher": "Elsevier",
+        "focus": "Neural Networks",
+        "metricSourceIds": [
+          "jcr",
+          "jcr-quartile"
+        ]
+      }
+    ]
+  }
+}

@@ -19,8 +19,11 @@ npm run preview
 
 ```bash
 npm run validate          # structural + provenance checks
-npm run expand            # backfill sources, merge expansions, re-validate
+npm run coverage          # merge coverage JSON expansions + validate
+npm run expand            # full rebuild helpers + coverage + validate
 ```
+
+Dataset scale (illustrative snapshot): **~850 journals** across **~300 domains**, with an on-page **All fields** catalog.
 
 ## GitHub Pages
 

@@ -35,6 +35,9 @@
     heroCanvas: document.getElementById("hero-canvas"),
     sourcesList: document.getElementById("sources-list"),
     fetchMethod: document.getElementById("fetch-method"),
+    fieldsGrid: document.getElementById("fields-grid"),
+    fieldsCount: document.getElementById("fields-count"),
+    fieldFilter: document.getElementById("field-filter"),
   };
 
   els.disclaimer.textContent = data.disclaimer;
@@ -85,17 +88,70 @@
     return out;
   }
 
-  function annotatePaths(node, trail = []) {
+  function annotatePaths(node, trail = [], nodeTrail = []) {
     node._pathName = [...trail, node.name].join(" › ");
     node._depth = trail.length;
+    node._nodeTrail = [...nodeTrail, node];
     if (node.children) {
       for (const child of node.children) {
-        annotatePaths(child, [...trail, node.name]);
+        annotatePaths(child, [...trail, node.name], [...nodeTrail, node]);
       }
     }
   }
 
   annotatePaths(data.root);
+
+  function listFieldNodes(node = data.root, out = []) {
+    // Field tiles: nodes that contain journals or are mid-level research fields.
+    const hasKids = Boolean(node.children?.length);
+    const hasJournals = Boolean(node.journals?.length);
+    if (node.id !== "academia" && (hasJournals || (hasKids && node._depth >= 2))) {
+      out.push(node);
+    }
+    for (const child of node.children || []) listFieldNodes(child, out);
+    return out;
+  }
+
+  function renderFieldsCatalog(filterText = "") {
+    if (!els.fieldsGrid) return;
+    const q = filterText.trim().toLowerCase();
+    const fields = listFieldNodes()
+      .map((node) => {
+        const stats = countSubtree(node);
+        return { node, stats };
+      })
+      .filter(({ node, stats }) => {
+        if (!stats.journals) return false;
+        if (!q) return true;
+        return (
+          node.name.toLowerCase().includes(q) ||
+          (node._pathName || "").toLowerCase().includes(q)
+        );
+      })
+      .sort((a, b) => a.node.name.localeCompare(b.node.name));
+
+    els.fieldsCount.textContent = `${fields.length} fields · ${
+      collectJournals(data.root).length
+    } journals in atlas`;
+    els.fieldsGrid.replaceChildren();
+    fields.forEach(({ node, stats }, i) => {
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "field-tile";
+      btn.style.animationDelay = `${Math.min(i, 20) * 0.015}s`;
+      btn.innerHTML = `<span class="fname">${escapeHtml(node.name)}</span>
+        <span class="fpath">${escapeHtml(node._pathName || node.name)}</span>
+        <span class="fmeta">${stats.journals} journals${
+        stats.predatory ? ` · ${stats.predatory} predatory` : ""
+      }</span>`;
+      btn.addEventListener("click", () => {
+        state.path = node._nodeTrail?.length ? [...node._nodeTrail] : [data.root, node];
+        render();
+        document.getElementById("explore")?.scrollIntoView({ behavior: "smooth" });
+      });
+      els.fieldsGrid.appendChild(btn);
+    });
+  }
 
   function syncFiltersFromDom() {
     state.search = els.search.value.trim();
@@ -608,7 +664,13 @@
   }
 
   bindFilters();
+  if (els.fieldFilter) {
+    els.fieldFilter.addEventListener("input", () => {
+      renderFieldsCatalog(els.fieldFilter.value);
+    });
+  }
   renderSources();
+  renderFieldsCatalog();
   renderHealth();
   render();
   initHeroCanvas();

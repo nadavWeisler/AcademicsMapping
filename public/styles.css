@@ -418,6 +418,80 @@ section {
   opacity: 0.55;
 }
 
+.fields-index {
+  background: rgba(255, 255, 255, 0.28);
+}
+
+.fields-toolbar {
+  max-width: var(--max);
+  margin: 0 auto 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: end;
+  justify-content: space-between;
+}
+
+.fields-toolbar .field {
+  flex: 1 1 16rem;
+  max-width: 28rem;
+}
+
+.fields-count {
+  margin: 0;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--ink-soft);
+}
+
+.fields-grid {
+  max-width: var(--max);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 0.65rem;
+}
+
+.field-tile {
+  border: 1px solid rgba(12, 36, 51, 0.1);
+  background: rgba(255, 255, 255, 0.75);
+  padding: 0.85rem 0.9rem;
+  text-align: left;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+  transition: border-color 0.2s ease, transform 0.2s ease, background 0.2s ease;
+}
+
+.field-tile:hover,
+.field-tile:focus-visible {
+  border-color: var(--sea);
+  background: rgba(15, 118, 110, 0.06);
+  transform: translateY(-2px);
+}
+
+.field-tile .fname {
+  display: block;
+  font-weight: 800;
+  font-size: 0.95rem;
+  margin-bottom: 0.25rem;
+}
+
+.field-tile .fpath {
+  display: block;
+  font-size: 0.72rem;
+  color: var(--ink-soft);
+  margin-bottom: 0.35rem;
+  line-height: 1.35;
+}
+
+.field-tile .fmeta {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--sea-deep);
+}
+
 .explore {
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0.7));

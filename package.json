@@ -5,7 +5,8 @@
   "scripts": {
     "validate": "node scripts/validate-data.mjs",
     "validate:strict": "node scripts/validate-data.mjs --strict",
-    "expand": "node scripts/expand-data.mjs && node scripts/validate-data.mjs",
+    "expand": "node scripts/expand-data.mjs && node scripts/apply-coverage.mjs && node scripts/validate-data.mjs",
+    "coverage": "node scripts/apply-coverage.mjs && node scripts/validate-data.mjs",
     "preview": "python3 -m http.server 8080 --directory public"
   }
 }
