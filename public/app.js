@@ -40,8 +40,8 @@
     fieldFilter: document.getElementById("field-filter"),
   };
 
-  els.disclaimer.textContent = data.disclaimer;
-  els.dataUpdated.textContent = data.updated;
+  if (els.disclaimer) els.disclaimer.textContent = data.disclaimer;
+  if (els.dataUpdated) els.dataUpdated.textContent = data.updated;
 
   const sourceById = new Map((data.sources || []).map((s) => [s.id, s]));
 
