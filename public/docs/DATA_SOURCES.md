@@ -13,3 +13,11 @@ ATLAS does **not** fetch journal metrics from the network at runtime.
 | Domain tree | OECD FOS–inspired hierarchy curated for deep navigation |
 
 The same registry is embedded in `window.ATLAS_DATA.sources` and rendered in the **Data sources** section of the site.
+
+## Validation
+
+```bash
+npm run validate
+```
+
+Checks include: unique journal names/ISSNs, IF/quartile ranges, boolean flags, `metricSourceIds` against the sources registry, and domain id uniqueness. GitHub Pages deploys run this script before publish.

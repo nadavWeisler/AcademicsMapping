@@ -1,0 +1,29 @@
+name: Validate dataset
+
+on:
+  pull_request:
+  push:
+    branches: [main, cursor/validate-expand-journal-data-c15c]
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Validate journal dataset
+        run: npm run validate
+
+      - name: Syntax-check scripts and app
+        run: |
+          node --check public/app.js
+          node --check scripts/validate-data.mjs
+          node --check scripts/apply-coverage.mjs
+          node --check scripts/expand-data.mjs

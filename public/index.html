@@ -26,6 +26,7 @@
       </div>
       <nav class="site-nav" aria-label="Primary">
         <a href="#explore">Explore</a>
+        <a href="#fields">All fields</a>
         <a href="#legend">Legend</a>
         <a href="#health">Domain health</a>
         <a href="#sources">Sources</a>
@@ -113,6 +114,24 @@
             </div>
           </article>
         </div>
+      </section>
+
+      <section class="fields-index" id="fields" aria-labelledby="fields-title">
+        <div class="section-head">
+          <h2 id="fields-title">All fields</h2>
+          <p>
+            Full catalog of research fields in this map. Open any field to drill
+            into its journals.
+          </p>
+        </div>
+        <div class="fields-toolbar">
+          <label class="field">
+            <span>Filter fields</span>
+            <input id="field-filter" type="search" placeholder="e.g. cardiology, law, robotics…" autocomplete="off" />
+          </label>
+          <p class="fields-count" id="fields-count" aria-live="polite"></p>
+        </div>
+        <div class="fields-grid" id="fields-grid"></div>
       </section>
 
       <section class="explore" id="explore" aria-labelledby="explore-title">
@@ -232,7 +251,7 @@
         <div class="section-head">
           <h2 id="health-title">Domain health</h2>
           <p>
-            Top-level fields ranked by mean impact and predatory density in this
+            Research fields ranked by mean impact and predatory density in this
             illustrative map.
           </p>
         </div>
