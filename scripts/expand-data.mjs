@@ -774,13 +774,14 @@ dedupe(data.root);
 
 data.updated = "2026-10";
 data.disclaimer =
-  "Educational snapshot curated in public/data.js (no runtime API fetch). Impact factors and quartiles are illustrative approximations inspired by JCR/Scopus patterns—verify live values in linked primary sources before submission decisions.";
+  "Educational snapshot curated in public/data.js (no runtime API fetch). Journal impact factors and quartiles are illustrative approximations inspired by JCR/Scopus patterns. Conference rows list series identity only (name, acronym, organizer, cadence, format) and are not CORE, JCR, or Scopus scores. Verify live values in linked primary sources before submission or attendance decisions.";
 
 const header = `/**
- * Nested academic domain taxonomy with sample journals.
+ * Nested academic domain taxonomy with sample journals and conferences.
  *
  * RUNTIME FETCH: none. The browser loads this local file only (\`data.js\`).
  * Values are a curated educational snapshot, not a live API response.
+ * Conference rows store series identity only — not CORE, JCR, or Scopus ranks.
  *
  * Canonical source registry lives in \`sources\` below and is rendered in the UI.
  * Validate with: node scripts/validate-data.mjs

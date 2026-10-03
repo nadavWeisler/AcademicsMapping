@@ -26,13 +26,31 @@ if (!data?.root) {
 const errors = [];
 const warnings = [];
 const journals = [];
+const conferences = [];
 const nameIndex = new Map();
 const issnIndex = new Map();
+const confNameIndex = new Map();
+const acronymIndex = new Map();
 const ids = new Set();
 
 const ISSN_RE = /^\d{4}-\d{3}[\dXx]$/;
 const DEMO_ISSN_RE = /^0000-\d{4}$/;
 const QUARTILES = new Set(["Q1", "Q2", "Q3", "Q4"]);
+const CADENCES = new Set(["annual", "biennial"]);
+const FORMATS = new Set(["conference", "symposium", "workshop"]);
+const FORBIDDEN_CONF_KEYS = [
+  "if",
+  "quartile",
+  "predatory",
+  "openAccess",
+  "issn",
+  "acceptanceRate",
+  "coreRank",
+  "rank",
+  "score",
+  "hIndex",
+  "citations",
+];
 const sourceIds = new Set((data.sources || []).map((s) => s.id));
 
 function walk(node, trail = []) {
@@ -118,6 +136,71 @@ function walk(node, trail = []) {
     }
   }
 
+  if (node.conferences != null && !Array.isArray(node.conferences)) {
+    errors.push(`conferences must be an array at ${label}`);
+  }
+
+  for (const c of node.conferences || []) {
+    conferences.push({ ...c, path: label });
+    if (!c.name) errors.push(`Conference missing name in ${label}`);
+    const nk = (c.name || "").toLowerCase().trim();
+    if (nk) {
+      if (confNameIndex.has(nk)) {
+        errors.push(`Duplicate conference name "${c.name}" (${confNameIndex.get(nk)} and ${label})`);
+      } else {
+        confNameIndex.set(nk, label);
+      }
+      if (nameIndex.has(nk)) {
+        errors.push(`Conference name collides with journal "${c.name}"`);
+      }
+    }
+
+    const acronym = typeof c.acronym === "string" ? c.acronym.trim() : "";
+    if (!acronym) {
+      errors.push(`Missing acronym for conference "${c.name}"`);
+    } else {
+      const ak = acronym.toLowerCase();
+      if (acronymIndex.has(ak)) {
+        errors.push(`Duplicate acronym "${acronym}" for "${acronymIndex.get(ak)}" and "${c.name}"`);
+      } else {
+        acronymIndex.set(ak, c.name);
+      }
+    }
+
+    if (!c.organizer) errors.push(`Missing organizer on conference "${c.name}"`);
+    if (!c.focus) errors.push(`Missing focus on conference "${c.name}"`);
+    if (!CADENCES.has(c.cadence)) {
+      errors.push(`Bad cadence for conference "${c.name}": ${c.cadence}`);
+    }
+    if (!FORMATS.has(c.format)) {
+      errors.push(`Bad format for conference "${c.name}": ${c.format}`);
+    }
+    if (c.illustrative !== true) {
+      errors.push(`Conference "${c.name}" must set illustrative: true`);
+    }
+    for (const key of FORBIDDEN_CONF_KEYS) {
+      if (Object.prototype.hasOwnProperty.call(c, key)) {
+        errors.push(`Conference "${c.name}" must not carry journal-style field "${key}"`);
+      }
+    }
+
+    if (!Array.isArray(c.metricSourceIds) || c.metricSourceIds.length === 0) {
+      errors.push(`Missing metricSourceIds on conference "${c.name}"`);
+    } else {
+      for (const sid of c.metricSourceIds) {
+        if (!sourceIds.has(sid)) {
+          errors.push(`Unknown metricSourceId "${sid}" on conference "${c.name}"`);
+        }
+      }
+      if (!c.metricSourceIds.includes("venue-identity")) {
+        errors.push(`Conference "${c.name}" must cite venue-identity`);
+      }
+      if (!c.metricSourceIds.includes("think-check-attend")) {
+        errors.push(`Conference "${c.name}" must cite think-check-attend`);
+      }
+    }
+  }
+
   for (const child of node.children || []) walk(child, pathNames);
 }
 
@@ -128,6 +211,12 @@ if (!data.fetch || data.fetch.runtime !== false) {
 }
 if (!Array.isArray(data.sources) || data.sources.length < 5) {
   errors.push("sources registry incomplete");
+}
+for (const id of ["venue-identity", "dblp", "core-portal", "think-check-attend"]) {
+  if (!sourceIds.has(id)) errors.push(`Missing conference source "${id}"`);
+}
+if (conferences.length < 1) {
+  errors.push("No conferences in dataset");
 }
 for (const s of data.sources || []) {
   if (!s.id || !s.url || !s.field || !s.provider || !s.howWeUse) {
@@ -152,11 +241,21 @@ if (byQ.Q3 < Math.max(5, journals.length * 0.05)) {
   warnings.push(`Few Q3 journals (${byQ.Q3}).`);
 }
 
+const byFormat = { conference: 0, symposium: 0, workshop: 0 };
+const byCadence = { annual: 0, biennial: 0 };
+for (const c of conferences) {
+  byFormat[c.format] = (byFormat[c.format] || 0) + 1;
+  byCadence[c.cadence] = (byCadence[c.cadence] || 0) + 1;
+}
+
 const summary = {
   journals: journals.length,
+  conferences: conferences.length,
   predatory,
   domains: ids.size,
   byQuartile: byQ,
+  byFormat,
+  byCadence,
   maxIf: journals.reduce((m, j) => Math.max(m, j.if), 0),
   sources: (data.sources || []).length,
   errors: errors.length,

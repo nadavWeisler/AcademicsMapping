@@ -273,6 +273,10 @@ section {
   gap: 1.25rem;
 }
 
+.signal-conf {
+  grid-column: 1 / -1;
+}
+
 .signal {
   padding: 1.35rem 1.4rem 1.5rem;
   background: rgba(255, 255, 255, 0.55);
@@ -580,6 +584,22 @@ section {
   accent-color: var(--sea);
 }
 
+.venue-filters {
+  display: grid;
+  gap: 1rem;
+}
+
+.venue-filters[hidden] {
+  display: none;
+}
+
+.filter-note {
+  margin: 0;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+
 .stats-card {
   padding: 0.85rem;
   background: linear-gradient(145deg, rgba(15, 118, 110, 0.12), rgba(8, 145, 178, 0.1));
@@ -756,6 +776,10 @@ section {
   font-weight: 600;
 }
 
+.if-bars.is-format {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .journals-head {
   display: flex;
   flex-wrap: wrap;
@@ -849,6 +873,19 @@ section {
 .badge-oa {
   background: rgba(8, 145, 178, 0.12);
   color: var(--cyan);
+}
+
+.badge-note {
+  background: rgba(12, 36, 51, 0.06);
+  color: var(--ink-soft);
+}
+
+.journal.is-conference {
+  border-left-color: var(--cyan);
+}
+
+.journal-if .value-text {
+  font-size: 1.25rem;
 }
 
 .journal-meta {

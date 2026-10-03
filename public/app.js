@@ -9,8 +9,11 @@
 
   const state = {
     path: [data.root],
+    venue: "journals",
     search: "",
     quartiles: new Set(["Q1", "Q2", "Q3", "Q4"]),
+    formats: new Set(["conference", "symposium", "workshop"]),
+    cadences: new Set(["annual", "biennial"]),
     ifMin: 0,
     predatory: "all",
     sort: "if-desc",
@@ -23,12 +26,17 @@
     journalsTitle: document.getElementById("journals-title"),
     scopeStats: document.getElementById("scope-stats"),
     search: document.getElementById("search"),
+    searchLabel: document.getElementById("search-label"),
     ifMin: document.getElementById("if-min"),
     ifLabel: document.getElementById("if-label"),
     sort: document.getElementById("sort"),
     quartileChart: document.getElementById("quartile-chart"),
     donutCenter: document.getElementById("donut-center"),
     ifBars: document.getElementById("if-bars"),
+    mixCaption: document.getElementById("mix-caption"),
+    distCaption: document.getElementById("dist-caption"),
+    journalFilters: document.getElementById("journal-filters"),
+    conferenceFilters: document.getElementById("conference-filters"),
     healthChart: document.getElementById("health-chart"),
     disclaimer: document.getElementById("disclaimer"),
     dataUpdated: document.getElementById("data-updated"),
@@ -88,6 +96,48 @@
     return out;
   }
 
+  function collectConferences(node, out = []) {
+    if (Array.isArray(node.conferences)) {
+      for (const conference of node.conferences) {
+        out.push({ ...conference, domainPath: node._pathName || node.name });
+      }
+    }
+    if (Array.isArray(node.children)) {
+      for (const child of node.children) {
+        collectConferences(child, out);
+      }
+    }
+    return out;
+  }
+
+  function cadenceLabel(cadence) {
+    switch (cadence) {
+      case "annual":
+        return "Annual";
+      case "biennial":
+        return "Biennial";
+      default: {
+        const _exhaustive = cadence;
+        throw new Error(`Unexpected cadence: ${String(_exhaustive)}`);
+      }
+    }
+  }
+
+  function formatLabel(format) {
+    switch (format) {
+      case "conference":
+        return "Conference";
+      case "symposium":
+        return "Symposium";
+      case "workshop":
+        return "Workshop";
+      default: {
+        const _exhaustive = format;
+        throw new Error(`Unexpected format: ${String(_exhaustive)}`);
+      }
+    }
+  }
+
   function annotatePaths(node, trail = [], nodeTrail = []) {
     node._pathName = [...trail, node.name].join(" › ");
     node._depth = trail.length;
@@ -105,7 +155,11 @@
     // Field tiles: nodes that contain journals or are mid-level research fields.
     const hasKids = Boolean(node.children?.length);
     const hasJournals = Boolean(node.journals?.length);
-    if (node.id !== "academia" && (hasJournals || (hasKids && node._depth >= 2))) {
+    const hasConferences = Boolean(node.conferences?.length);
+    if (
+      node.id !== "academia" &&
+      (hasJournals || hasConferences || (hasKids && node._depth >= 2))
+    ) {
       out.push(node);
     }
     for (const child of node.children || []) listFieldNodes(child, out);
@@ -121,7 +175,7 @@
         return { node, stats };
       })
       .filter(({ node, stats }) => {
-        if (!stats.journals) return false;
+        if (!stats.journals && !stats.conferences) return false;
         if (!q) return true;
         return (
           node.name.toLowerCase().includes(q) ||
@@ -132,18 +186,23 @@
 
     els.fieldsCount.textContent = `${fields.length} fields · ${
       collectJournals(data.root).length
-    } journals in atlas`;
+    } journals · ${collectConferences(data.root).length} conferences in atlas`;
     els.fieldsGrid.replaceChildren();
     fields.forEach(({ node, stats }, i) => {
       const btn = document.createElement("button");
       btn.type = "button";
       btn.className = "field-tile";
       btn.style.animationDelay = `${Math.min(i, 20) * 0.015}s`;
+      const metaBits = [];
+      if (stats.journals) {
+        metaBits.push(
+          `${stats.journals} journals${stats.predatory ? ` (${stats.predatory} predatory)` : ""}`
+        );
+      }
+      if (stats.conferences) metaBits.push(`${stats.conferences} conferences`);
       btn.innerHTML = `<span class="fname">${escapeHtml(node.name)}</span>
         <span class="fpath">${escapeHtml(node._pathName || node.name)}</span>
-        <span class="fmeta">${stats.journals} journals${
-        stats.predatory ? ` · ${stats.predatory} predatory` : ""
-      }</span>`;
+        <span class="fmeta">${metaBits.join(" · ")}</span>`;
       btn.addEventListener("click", () => {
         state.path = node._nodeTrail?.length ? [...node._nodeTrail] : [data.root, node];
         render();
@@ -158,11 +217,9 @@
     state.ifMin = Number(els.ifMin.value) || 0;
     els.ifLabel.textContent = String(state.ifMin);
     state.sort = els.sort.value;
-    state.quartiles = new Set(
-      [...document.querySelectorAll("#quartile-filters input:checked")].map(
-        (el) => el.value
-      )
-    );
+    state.quartiles = checkedValues("#quartile-filters input:checked");
+    state.formats = checkedValues("#format-filters input:checked");
+    state.cadences = checkedValues("#cadence-filters input:checked");
     const pred = document.querySelector('#pred-filters input[name="pred"]:checked');
     state.predatory = pred ? pred.value : "all";
   }
@@ -213,6 +270,7 @@
     const journals = collectJournals(node);
     return {
       journals: journals.length,
+      conferences: collectConferences(node).length,
       predatory: journals.filter((j) => j.predatory).length,
       meanIf:
         journals.length === 0
@@ -258,7 +316,7 @@
       note.className = "empty";
       note.style.margin = "0";
       note.style.padding = "0.85rem 1rem";
-      note.textContent = "Leaf domain — browse journals below.";
+      note.textContent = "Leaf domain — browse the list below.";
       els.children.appendChild(note);
       return;
     }
@@ -269,10 +327,12 @@
       btn.type = "button";
       btn.className = "domain-chip";
       btn.style.animationDelay = `${i * 0.04}s`;
+      let meta = `${stats.journals} journals`;
+      if (stats.conferences) meta += ` · ${stats.conferences} conferences`;
+      meta += ` · ${stats.children} sub-domains`;
+      if (stats.predatory) meta += ` · ${stats.predatory} risk`;
       btn.innerHTML = `<span class="name">${escapeHtml(child.name)}</span>
-        <span class="meta">${stats.journals} journals · ${stats.children} sub-domains${
-        stats.predatory ? ` · ${stats.predatory} risk` : ""
-      }</span>`;
+        <span class="meta">${meta}</span>`;
       btn.addEventListener("click", () => {
         state.path = [...state.path, child];
         render();
@@ -296,11 +356,120 @@
 
   const globalMaxIf = maxIfInData();
 
+  function checkedValues(selector) {
+    return new Set(
+      [...document.querySelectorAll(selector)].map((el) => el.value)
+    );
+  }
+
+  function applyVenueChrome() {
+    const conferences = state.venue === "conferences";
+    if (els.journalFilters) els.journalFilters.hidden = conferences;
+    if (els.conferenceFilters) els.conferenceFilters.hidden = !conferences;
+    if (els.searchLabel) {
+      els.searchLabel.textContent = conferences ? "Search conferences" : "Search journals";
+    }
+    if (els.search) {
+      els.search.placeholder = conferences
+        ? "Name, acronym, organizer…"
+        : "Name, ISSN, publisher…";
+    }
+    if (els.mixCaption) {
+      els.mixCaption.textContent = conferences ? "Cadence mix in scope" : "Quartile mix in scope";
+    }
+    if (els.distCaption) {
+      els.distCaption.textContent = conferences ? "Format mix in scope" : "Impact factor distribution";
+    }
+    if (els.ifBars) {
+      els.ifBars.setAttribute(
+        "aria-label",
+        conferences ? "Conference format mix" : "Impact factor histogram"
+      );
+      els.ifBars.classList.toggle("is-format", conferences);
+    }
+
+    const options = conferences
+      ? [
+          ["name", "Name"],
+          ["acronym", "Acronym"],
+          ["format", "Format"],
+        ]
+      : [
+          ["if-desc", "Impact ↓"],
+          ["if-asc", "Impact ↑"],
+          ["name", "Name"],
+          ["quartile", "Quartile"],
+        ];
+    const allowed = new Set(options.map(([value]) => value));
+    if (!allowed.has(state.sort)) state.sort = options[0][0];
+    els.sort.replaceChildren();
+    for (const [value, label] of options) {
+      const opt = document.createElement("option");
+      opt.value = value;
+      opt.textContent = label;
+      if (value === state.sort) opt.selected = true;
+      els.sort.appendChild(opt);
+    }
+  }
+
+  function matchesConferenceFilters(conference) {
+    if (!state.formats.has(conference.format)) return false;
+    if (!state.cadences.has(conference.cadence)) return false;
+    if (state.search) {
+      const q = state.search.toLowerCase();
+      const hay = [
+        conference.name,
+        conference.acronym,
+        conference.organizer,
+        conference.focus,
+        conference.domainPath,
+      ]
+        .join(" ")
+        .toLowerCase();
+      if (!hay.includes(q)) return false;
+    }
+    return true;
+  }
+
+  function sortConferences(list) {
+    const copy = [...list];
+    switch (state.sort) {
+      case "acronym":
+        return copy.sort(
+          (a, b) => a.acronym.localeCompare(b.acronym) || a.name.localeCompare(b.name)
+        );
+      case "format":
+        return copy.sort(
+          (a, b) => a.format.localeCompare(b.format) || a.name.localeCompare(b.name)
+        );
+      case "name":
+        return copy.sort((a, b) => a.name.localeCompare(b.name));
+      default: {
+        const _exhaustive = state.sort;
+        throw new Error(`Unexpected conference sort: ${String(_exhaustive)}`);
+      }
+    }
+  }
+
+  function sourceChips(ids) {
+    return (ids || [])
+      .map((id) => sourceById.get(id))
+      .filter(Boolean)
+      .map(
+        (s) =>
+          `<a class="source-chip" href="#sources" title="${escapeHtml(s.provider)}">${escapeHtml(
+            s.field
+          )}</a>`
+      )
+      .join("");
+  }
+
   function renderJournals() {
     syncFiltersFromDom();
     const node = currentNode();
     const all = collectJournals(node);
     const filtered = sortJournals(all.filter(matchesFilters));
+    const conferencesHere = collectConferences(node).length;
 
     els.journalsTitle.textContent =
       state.path.length <= 1
@@ -312,7 +481,11 @@
       shown of ${all.length} in scope
       <div style="margin-top:0.45rem">${preds} predatory flagged · mean IF ${
       all.length ? (all.reduce((s, j) => s + j.if, 0) / all.length).toFixed(1) : "—"
-    }</div>`;
+    }</div>${
+      conferencesHere
+        ? `<div style="margin-top:0.35rem">${conferencesHere} conferences in this domain</div>`
+        : ""
+    }`;
 
     drawQuartileDonut(filtered);
     drawIfBars(filtered);
@@ -372,7 +545,98 @@
     });
   }
 
-  function drawQuartileDonut(journals) {
+  function renderConferences() {
+    syncFiltersFromDom();
+    const node = currentNode();
+    const all = collectConferences(node);
+    const filtered = sortConferences(all.filter(matchesConferenceFilters));
+    const journalsHere = collectJournals(node).length;
+
+    els.journalsTitle.textContent =
+      state.path.length <= 1
+        ? "Conferences across academia"
+        : `Conferences in ${node.name}`;
+
+    els.scopeStats.innerHTML = `<strong>${filtered.length}</strong>
+      shown of ${all.length} in scope
+      <div style="margin-top:0.45rem">Illustrative series only — no CORE, JCR, or Scopus rank stored.</div>${
+        journalsHere
+          ? `<div style="margin-top:0.35rem">${journalsHere} journals in this domain</div>`
+          : ""
+      }`;
+
+    const cadenceCounts = { annual: 0, biennial: 0 };
+    for (const conference of filtered) {
+      cadenceCounts[conference.cadence] = (cadenceCounts[conference.cadence] || 0) + 1;
+    }
+    paintDonut(
+      cadenceCounts,
+      { annual: "#0f766e", biennial: "#0369a1" },
+      `${filtered.length}<small>conferences<br>not ranked</small>`
+    );
+    drawLabeledBars([
+      { label: "Conference", count: filtered.filter((c) => c.format === "conference").length },
+      { label: "Symposium", count: filtered.filter((c) => c.format === "symposium").length },
+      { label: "Workshop", count: filtered.filter((c) => c.format === "workshop").length },
+    ]);
+
+    els.journals.replaceChildren();
+    if (!filtered.length) {
+      const empty = document.createElement("li");
+      empty.className = "empty";
+      empty.textContent = "No conferences match these filters. Widen format or cadence.";
+      els.journals.appendChild(empty);
+      return;
+    }
+
+    filtered.forEach((conference, index) => {
+      const li = document.createElement("li");
+      li.className = "journal is-conference";
+      li.style.animationDelay = `${Math.min(index, 12) * 0.03}s`;
+      li.innerHTML = `
+        <div>
+          <div class="journal-top">
+            <h4>${escapeHtml(conference.name)}</h4>
+            <span class="badge badge-oa">${escapeHtml(conference.acronym)}</span>
+            <span class="badge badge-note">Illustrative</span>
+          </div>
+          <p class="journal-meta">${escapeHtml(conference.organizer)} · ${escapeHtml(
+            cadenceLabel(conference.cadence)
+          )} ${escapeHtml(formatLabel(conference.format).toLowerCase())} · ${escapeHtml(
+            conference.domainPath || node.name
+          )}</p>
+          <p class="journal-focus">${escapeHtml(conference.focus || "")}</p>
+          <p class="journal-sources"><span>Provenance:</span> ${sourceChips(
+            conference.metricSourceIds
+          )}</p>
+        </div>
+        <div class="journal-if">
+          <div>
+            <div class="value value-text">${escapeHtml(cadenceLabel(conference.cadence))}</div>
+            <div class="label">${escapeHtml(formatLabel(conference.format))}</div>
+            <div class="label">Not a rank</div>
+          </div>
+        </div>`;
+      els.journals.appendChild(li);
+    });
+  }
+
+  function renderList() {
+    switch (state.venue) {
+      case "journals":
+        renderJournals();
+        return;
+      case "conferences":
+        renderConferences();
+        return;
+      default: {
+        const _exhaustive = state.venue;
+        throw new Error(`Unexpected venue: ${String(_exhaustive)}`);
+      }
+    }
+  }
+
+  function paintDonut(counts, colors, centerHtml) {
     const canvas = els.quartileChart;
     const ctx = canvas.getContext("2d");
     const dpr = window.devicePixelRatio || 1;
@@ -382,19 +646,16 @@
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     ctx.clearRect(0, 0, size, size);
 
-    const counts = { Q1: 0, Q2: 0, Q3: 0, Q4: 0 };
-    for (const j of journals) counts[j.quartile] = (counts[j.quartile] || 0) + 1;
-    const total = journals.length || 1;
-    const colors = { Q1: "#0f766e", Q2: "#0369a1", Q3: "#a16207", Q4: "#c2410c" };
+    const keys = Object.keys(counts);
+    const total = keys.reduce((sum, key) => sum + (counts[key] || 0), 0) || 1;
     const cx = size / 2;
     const cy = size / 2;
     const radius = 86;
     const inner = 52;
     let start = -Math.PI / 2;
-
-    const entries = Object.keys(counts);
     let drawn = 0;
-    for (const key of entries) {
+
+    for (const key of keys) {
       const value = counts[key];
       if (!value) continue;
       const angle = (value / total) * Math.PI * 2;
@@ -402,7 +663,7 @@
       ctx.moveTo(cx, cy);
       ctx.arc(cx, cy, radius, start, start + angle);
       ctx.closePath();
-      ctx.fillStyle = colors[key];
+      ctx.fillStyle = colors[key] || "#0f766e";
       ctx.fill();
       start += angle;
       drawn += value;
@@ -421,8 +682,33 @@
     ctx.fill();
     ctx.globalCompositeOperation = "source-over";
 
+    els.donutCenter.innerHTML = centerHtml;
+  }
+
+  function drawQuartileDonut(journals) {
+    const counts = { Q1: 0, Q2: 0, Q3: 0, Q4: 0 };
+    for (const j of journals) counts[j.quartile] = (counts[j.quartile] || 0) + 1;
+    const total = journals.length || 1;
     const q1pct = Math.round((counts.Q1 / total) * 100) || 0;
-    els.donutCenter.innerHTML = `${journals.length}<small>journals<br>${q1pct}% Q1</small>`;
+    paintDonut(
+      counts,
+      { Q1: "#0f766e", Q2: "#0369a1", Q3: "#a16207", Q4: "#c2410c" },
+      `${journals.length}<small>journals<br>${q1pct}% Q1</small>`
+    );
+  }
+
+  function drawLabeledBars(rows) {
+    const max = Math.max(...rows.map((row) => row.count), 1);
+    els.ifBars.replaceChildren();
+    for (const row of rows) {
+      const height = Math.max(4, (row.count / max) * 130);
+      const col = document.createElement("div");
+      col.className = "bar";
+      col.innerHTML = `<i style="height:${height}px"></i><span>${escapeHtml(row.label)}<br>${
+        row.count
+      }</span>`;
+      els.ifBars.appendChild(col);
+    }
   }
 
   function drawIfBars(journals) {
@@ -434,18 +720,12 @@
       { label: "20–40", min: 20, max: 40 },
       { label: "40+", min: 40, max: Infinity },
     ];
-    const counts = bins.map(
-      (b) => journals.filter((j) => j.if >= b.min && j.if < b.max).length
+    drawLabeledBars(
+      bins.map((bin) => ({
+        label: bin.label,
+        count: journals.filter((j) => j.if >= bin.min && j.if < bin.max).length,
+      }))
     );
-    const max = Math.max(...counts, 1);
-    els.ifBars.replaceChildren();
-    bins.forEach((bin, i) => {
-      const height = Math.max(4, (counts[i] / max) * 130);
-      const col = document.createElement("div");
-      col.className = "bar";
-      col.innerHTML = `<i style="height:${height}px"></i><span>${bin.label}<br>${counts[i]}</span>`;
-      els.ifBars.appendChild(col);
-    });
   }
 
   function renderHealth() {
@@ -462,7 +742,13 @@
           ? 0
           : journals.reduce((s, j) => s + j.if, 0) / journals.length;
       const predatory = journals.filter((j) => j.predatory).length;
-      return { name: node.name, mean, predatory, count: journals.length };
+      return {
+        name: node.name,
+        mean,
+        predatory,
+        count: journals.length,
+        conferences: collectConferences(node).length,
+      };
     });
     rows.sort((a, b) => b.mean - a.mean);
     const maxMean = Math.max(...rows.map((r) => r.mean), 1);
@@ -472,12 +758,19 @@
       const el = document.createElement("div");
       el.className = "health-row";
       el.style.animationDelay = `${i * 0.06}s`;
-      const width = (row.mean / maxMean) * 100;
+      const width = row.count ? (row.mean / maxMean) * 100 : 0;
+      const journalNums = row.count
+        ? `IF̄ ${row.mean.toFixed(1)} · ${row.count} titles`
+        : "No journals in this slice";
+      const confNums = row.conferences
+        ? `${row.conferences} conferences (not ranked)`
+        : "";
       el.innerHTML = `
         <div class="label">${escapeHtml(row.name)}</div>
         <div class="health-track"><i style="width:${width}%"></i></div>
-        <div class="nums">IF̄ ${row.mean.toFixed(1)} · ${row.count} titles
-          ${row.predatory ? `<span class="warn"> · ${row.predatory} predatory</span>` : ""}
+        <div class="nums">${journalNums}${
+          row.predatory ? `<span class="warn"> · ${row.predatory} predatory</span>` : ""
+        }${confNums ? ` · ${confNums}` : ""}
         </div>`;
       els.healthChart.appendChild(el);
     });
@@ -486,29 +779,29 @@
   function render() {
     renderCrumbs();
     renderChildren();
-    renderJournals();
+    renderList();
   }
 
   function bindFilters() {
     els.search.addEventListener("input", () => {
       state.search = els.search.value.trim();
-      renderJournals();
+      renderList();
     });
 
     els.ifMin.addEventListener("input", () => {
       state.ifMin = Number(els.ifMin.value);
       els.ifLabel.textContent = String(state.ifMin);
-      renderJournals();
+      renderList();
     });
     els.ifMin.addEventListener("change", () => {
       state.ifMin = Number(els.ifMin.value);
       els.ifLabel.textContent = String(state.ifMin);
-      renderJournals();
+      renderList();
     });
 
     els.sort.addEventListener("change", () => {
       state.sort = els.sort.value;
-      renderJournals();
+      renderList();
     });
 
     document.querySelectorAll("#quartile-filters input").forEach((input) => {
@@ -518,7 +811,7 @@
             (el) => el.value
           )
         );
-        renderJournals();
+        renderList();
       });
     });
 
@@ -526,8 +819,25 @@
       input.addEventListener("change", () => {
         if (input.checked) {
           state.predatory = input.value;
-          renderJournals();
+          renderList();
         }
+      });
+    });
+
+    document.querySelectorAll('#venue-filters input[name="venue"]').forEach((input) => {
+      input.addEventListener("change", () => {
+        if (!input.checked) return;
+        state.venue = input.value === "conferences" ? "conferences" : "journals";
+        applyVenueChrome();
+        renderList();
+      });
+    });
+
+    document.querySelectorAll("#format-filters input, #cadence-filters input").forEach((input) => {
+      input.addEventListener("change", () => {
+        state.formats = checkedValues("#format-filters input:checked");
+        state.cadences = checkedValues("#cadence-filters input:checked");
+        renderList();
       });
     });
   }
@@ -664,6 +974,7 @@
   }
 
   bindFilters();
+  applyVenueChrome();
   if (els.fieldFilter) {
     els.fieldFilter.addEventListener("input", () => {
       renderFieldsCatalog(els.fieldFilter.value);
