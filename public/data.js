@@ -1,8 +1,9 @@
 /**
- * Nested academic domain taxonomy with sample journals.
+ * Nested academic domain taxonomy with sample journals and conferences.
  *
  * RUNTIME FETCH: none. The browser loads this local file only (`data.js`).
  * Values are a curated educational snapshot, not a live API response.
+ * Conference rows store series identity only — not CORE, JCR, or Scopus ranks.
  *
  * Canonical source registry lives in `sources` below and is rendered in the UI.
  * Validate with: node scripts/validate-data.mjs
@@ -13,9 +14,9 @@ window.ATLAS_DATA = {
   "fetch": {
     "runtime": false,
     "localFile": "data.js",
-    "method": "No remote fetch at runtime. Journal rows are curated into this static file for GitHub Pages."
+    "method": "No remote fetch at runtime. Journal and conference rows are curated into this static file for GitHub Pages."
   },
-  "disclaimer": "Educational snapshot curated in public/data.js (no runtime API fetch). Impact factors and quartiles are illustrative approximations inspired by JCR/Scopus patterns—verify live values in linked primary sources before submission decisions.",
+  "disclaimer": "Educational snapshot curated in public/data.js (no runtime API fetch). Journal impact factors and quartiles are illustrative approximations inspired by JCR/Scopus patterns. Conference rows list series identity only (name, acronym, organizer, cadence, format) and are not CORE, JCR, or Scopus scores. Verify live values in linked primary sources before submission or attendance decisions.",
   "sources": [
     {
       "id": "jcr",
@@ -74,6 +75,38 @@ window.ATLAS_DATA = {
       "url": "https://www.oecd.org/science/inno/38235147.pdf",
       "howWeUse": "Hierarchy is curated for navigation depth (medicine & psychology expanded). Not an official OECD dump.",
       "access": "Public PDF"
+    },
+    {
+      "id": "venue-identity",
+      "field": "Conference series identity",
+      "provider": "Organizing society or foundation",
+      "url": "https://thinkchecksubmit.org/think-check-attend/",
+      "howWeUse": "Name, acronym, organizer, focus, cadence, and format are illustrative labels so you can browse widely known series inside a domain. They are not acceptance rates, citation counts, or ranks. Confirm the current call for papers with the organizer.",
+      "access": "Public"
+    },
+    {
+      "id": "dblp",
+      "field": "Computing venue record",
+      "provider": "dblp computer science bibliography",
+      "url": "https://dblp.org/",
+      "howWeUse": "Linked on computing conferences so you can confirm the series in a public bibliography. ATLAS does not copy citation counts or h-indexes from dblp.",
+      "access": "Public"
+    },
+    {
+      "id": "core-portal",
+      "field": "Conference ranks (not stored)",
+      "provider": "CORE Conference Portal",
+      "url": "https://portal.core.edu.au/conf-ranks/",
+      "howWeUse": "CORE publishes its own ranks. This snapshot does not store those ranks or any numeric conference score. Open the portal to check a computing venue yourself.",
+      "access": "Public"
+    },
+    {
+      "id": "think-check-attend",
+      "field": "Conference quality checks",
+      "provider": "Think. Check. Attend.",
+      "url": "https://thinkchecksubmit.org/think-check-attend/",
+      "howWeUse": "Checklist for judging whether a meeting is a suitable place to present. This map does not flag predatory conferences and does not score them.",
+      "access": "Public"
     }
   ],
   "root": {
@@ -1522,6 +1555,21 @@ window.ATLAS_DATA = {
                           "jcr-quartile"
                         ]
                       }
+                    ],
+                    "conferences": [
+                      {
+                        "illustrative": true,
+                        "metricSourceIds": [
+                          "venue-identity",
+                          "think-check-attend"
+                        ],
+                        "name": "International Conference on High Energy Physics",
+                        "acronym": "ICHEP",
+                        "organizer": "IUPAP Commission C11",
+                        "focus": "High energy physics",
+                        "cadence": "biennial",
+                        "format": "conference"
+                      }
                     ]
                   },
                   {
@@ -2743,6 +2791,21 @@ window.ATLAS_DATA = {
                     ],
                     "children": []
                   }
+                ],
+                "conferences": [
+                  {
+                    "illustrative": true,
+                    "metricSourceIds": [
+                      "venue-identity",
+                      "think-check-attend"
+                    ],
+                    "name": "AGU Fall Meeting",
+                    "acronym": "AGU",
+                    "organizer": "American Geophysical Union",
+                    "focus": "Earth and space science",
+                    "cadence": "annual",
+                    "format": "conference"
+                  }
                 ]
               }
             ]
@@ -2837,6 +2900,23 @@ window.ATLAS_DATA = {
                               "jcr-quartile"
                             ]
                           }
+                        ],
+                        "conferences": [
+                          {
+                            "illustrative": true,
+                            "metricSourceIds": [
+                              "venue-identity",
+                              "dblp",
+                              "core-portal",
+                              "think-check-attend"
+                            ],
+                            "name": "Annual Meeting of the Association for Computational Linguistics",
+                            "acronym": "ACL",
+                            "organizer": "Association for Computational Linguistics",
+                            "focus": "Computational linguistics and natural language processing",
+                            "cadence": "annual",
+                            "format": "conference"
+                          }
                         ]
                       },
                       {
@@ -2898,6 +2978,38 @@ window.ATLAS_DATA = {
                               "jcr",
                               "jcr-quartile"
                             ]
+                          }
+                        ],
+                        "conferences": [
+                          {
+                            "illustrative": true,
+                            "metricSourceIds": [
+                              "venue-identity",
+                              "dblp",
+                              "core-portal",
+                              "think-check-attend"
+                            ],
+                            "name": "IEEE/CVF Conference on Computer Vision and Pattern Recognition",
+                            "acronym": "CVPR",
+                            "organizer": "IEEE Computer Society and the Computer Vision Foundation",
+                            "focus": "Computer vision and pattern recognition",
+                            "cadence": "annual",
+                            "format": "conference"
+                          },
+                          {
+                            "illustrative": true,
+                            "metricSourceIds": [
+                              "venue-identity",
+                              "dblp",
+                              "core-portal",
+                              "think-check-attend"
+                            ],
+                            "name": "IEEE/CVF International Conference on Computer Vision",
+                            "acronym": "ICCV",
+                            "organizer": "IEEE Computer Society and the Computer Vision Foundation",
+                            "focus": "Computer vision",
+                            "cadence": "biennial",
+                            "format": "conference"
                           }
                         ]
                       },
@@ -2979,6 +3091,53 @@ window.ATLAS_DATA = {
                           "jcr",
                           "jcr-quartile"
                         ]
+                      }
+                    ],
+                    "conferences": [
+                      {
+                        "illustrative": true,
+                        "metricSourceIds": [
+                          "venue-identity",
+                          "dblp",
+                          "core-portal",
+                          "think-check-attend"
+                        ],
+                        "name": "Conference on Neural Information Processing Systems",
+                        "acronym": "NeurIPS",
+                        "organizer": "Neural Information Processing Systems Foundation",
+                        "focus": "Neural information processing and machine learning",
+                        "cadence": "annual",
+                        "format": "conference"
+                      },
+                      {
+                        "illustrative": true,
+                        "metricSourceIds": [
+                          "venue-identity",
+                          "dblp",
+                          "core-portal",
+                          "think-check-attend"
+                        ],
+                        "name": "International Conference on Machine Learning",
+                        "acronym": "ICML",
+                        "organizer": "International Machine Learning Society",
+                        "focus": "Machine learning",
+                        "cadence": "annual",
+                        "format": "conference"
+                      },
+                      {
+                        "illustrative": true,
+                        "metricSourceIds": [
+                          "venue-identity",
+                          "dblp",
+                          "core-portal",
+                          "think-check-attend"
+                        ],
+                        "name": "IEEE International Workshop on Machine Learning for Signal Processing",
+                        "acronym": "MLSP",
+                        "organizer": "IEEE Signal Processing Society",
+                        "focus": "Machine learning methods for signal processing",
+                        "cadence": "annual",
+                        "format": "workshop"
                       }
                     ]
                   },
@@ -3096,6 +3255,23 @@ window.ATLAS_DATA = {
                           "jcr-quartile"
                         ]
                       }
+                    ],
+                    "conferences": [
+                      {
+                        "illustrative": true,
+                        "metricSourceIds": [
+                          "venue-identity",
+                          "dblp",
+                          "core-portal",
+                          "think-check-attend"
+                        ],
+                        "name": "ACM Symposium on Principles of Distributed Computing",
+                        "acronym": "PODC",
+                        "organizer": "ACM SIGACT and ACM SIGOPS",
+                        "focus": "Principles of distributed computing",
+                        "cadence": "annual",
+                        "format": "symposium"
+                      }
                     ]
                   },
                   {
@@ -3173,7 +3349,41 @@ window.ATLAS_DATA = {
                           "jcr-quartile"
                         ]
                       }
+                    ],
+                    "conferences": [
+                      {
+                        "illustrative": true,
+                        "metricSourceIds": [
+                          "venue-identity",
+                          "dblp",
+                          "core-portal",
+                          "think-check-attend"
+                        ],
+                        "name": "IEEE Symposium on Security and Privacy",
+                        "acronym": "S&P",
+                        "organizer": "IEEE Computer Society",
+                        "focus": "Computer security and privacy",
+                        "cadence": "annual",
+                        "format": "symposium"
+                      }
                     ]
+                  }
+                ],
+                "conferences": [
+                  {
+                    "illustrative": true,
+                    "metricSourceIds": [
+                      "venue-identity",
+                      "dblp",
+                      "core-portal",
+                      "think-check-attend"
+                    ],
+                    "name": "ACM Workshop on Hot Topics in Networks",
+                    "acronym": "HotNets",
+                    "organizer": "ACM SIGCOMM",
+                    "focus": "Early-stage computer networking topics",
+                    "cadence": "annual",
+                    "format": "workshop"
                   }
                 ]
               },
@@ -3236,6 +3446,23 @@ window.ATLAS_DATA = {
                       "jcr",
                       "jcr-quartile"
                     ]
+                  }
+                ],
+                "conferences": [
+                  {
+                    "illustrative": true,
+                    "metricSourceIds": [
+                      "venue-identity",
+                      "dblp",
+                      "core-portal",
+                      "think-check-attend"
+                    ],
+                    "name": "ACM CHI Conference on Human Factors in Computing Systems",
+                    "acronym": "CHI",
+                    "organizer": "ACM SIGCHI",
+                    "focus": "Human-computer interaction",
+                    "cadence": "annual",
+                    "format": "conference"
                   }
                 ]
               },
@@ -3315,7 +3542,24 @@ window.ATLAS_DATA = {
                     ]
                   }
                 ],
-                "children": []
+                "children": [],
+                "conferences": [
+                  {
+                    "illustrative": true,
+                    "metricSourceIds": [
+                      "venue-identity",
+                      "dblp",
+                      "core-portal",
+                      "think-check-attend"
+                    ],
+                    "name": "International Conference on Software Engineering",
+                    "acronym": "ICSE",
+                    "organizer": "ACM and IEEE Computer Society",
+                    "focus": "Software engineering",
+                    "cadence": "annual",
+                    "format": "conference"
+                  }
+                ]
               },
               {
                 "id": "databases",
@@ -3378,7 +3622,24 @@ window.ATLAS_DATA = {
                     ]
                   }
                 ],
-                "children": []
+                "children": [],
+                "conferences": [
+                  {
+                    "illustrative": true,
+                    "metricSourceIds": [
+                      "venue-identity",
+                      "dblp",
+                      "core-portal",
+                      "think-check-attend"
+                    ],
+                    "name": "International Conference on Very Large Data Bases",
+                    "acronym": "VLDB",
+                    "organizer": "VLDB Endowment",
+                    "focus": "Data management and very large databases",
+                    "cadence": "annual",
+                    "format": "conference"
+                  }
+                ]
               },
               {
                 "id": "theory-cs",
@@ -3441,7 +3702,24 @@ window.ATLAS_DATA = {
                     ]
                   }
                 ],
-                "children": []
+                "children": [],
+                "conferences": [
+                  {
+                    "illustrative": true,
+                    "metricSourceIds": [
+                      "venue-identity",
+                      "dblp",
+                      "core-portal",
+                      "think-check-attend"
+                    ],
+                    "name": "ACM Symposium on Theory of Computing",
+                    "acronym": "STOC",
+                    "organizer": "ACM SIGACT",
+                    "focus": "Theory of computing",
+                    "cadence": "annual",
+                    "format": "symposium"
+                  }
+                ]
               },
               {
                 "id": "graphics",
@@ -3490,7 +3768,24 @@ window.ATLAS_DATA = {
                     ]
                   }
                 ],
-                "children": []
+                "children": [],
+                "conferences": [
+                  {
+                    "illustrative": true,
+                    "metricSourceIds": [
+                      "venue-identity",
+                      "dblp",
+                      "core-portal",
+                      "think-check-attend"
+                    ],
+                    "name": "ACM SIGGRAPH Conference",
+                    "acronym": "SIGGRAPH",
+                    "organizer": "ACM SIGGRAPH",
+                    "focus": "Computer graphics and interactive techniques",
+                    "cadence": "annual",
+                    "format": "conference"
+                  }
+                ]
               },
               {
                 "id": "robotics",
@@ -3553,7 +3848,24 @@ window.ATLAS_DATA = {
                     ]
                   }
                 ],
-                "children": []
+                "children": [],
+                "conferences": [
+                  {
+                    "illustrative": true,
+                    "metricSourceIds": [
+                      "venue-identity",
+                      "dblp",
+                      "core-portal",
+                      "think-check-attend"
+                    ],
+                    "name": "IEEE International Conference on Robotics and Automation",
+                    "acronym": "ICRA",
+                    "organizer": "IEEE Robotics and Automation Society",
+                    "focus": "Robotics and automation",
+                    "cadence": "annual",
+                    "format": "conference"
+                  }
+                ]
               },
               {
                 "id": "programming-languages",
@@ -3652,7 +3964,24 @@ window.ATLAS_DATA = {
                     ]
                   }
                 ],
-                "children": []
+                "children": [],
+                "conferences": [
+                  {
+                    "illustrative": true,
+                    "metricSourceIds": [
+                      "venue-identity",
+                      "dblp",
+                      "core-portal",
+                      "think-check-attend"
+                    ],
+                    "name": "International ACM SIGIR Conference on Research and Development in Information Retrieval",
+                    "acronym": "SIGIR",
+                    "organizer": "ACM SIGIR",
+                    "focus": "Information retrieval",
+                    "cadence": "annual",
+                    "format": "conference"
+                  }
+                ]
               }
             ]
           },
@@ -3752,6 +4081,21 @@ window.ATLAS_DATA = {
                           "jcr",
                           "jcr-quartile"
                         ]
+                      }
+                    ],
+                    "conferences": [
+                      {
+                        "illustrative": true,
+                        "metricSourceIds": [
+                          "venue-identity",
+                          "think-check-attend"
+                        ],
+                        "name": "ASCO Annual Meeting",
+                        "acronym": "ASCO",
+                        "organizer": "American Society of Clinical Oncology",
+                        "focus": "Clinical oncology",
+                        "cadence": "annual",
+                        "format": "conference"
                       }
                     ]
                   },
@@ -3937,6 +4281,21 @@ window.ATLAS_DATA = {
                           "jcr",
                           "jcr-quartile"
                         ]
+                      }
+                    ],
+                    "conferences": [
+                      {
+                        "illustrative": true,
+                        "metricSourceIds": [
+                          "venue-identity",
+                          "think-check-attend"
+                        ],
+                        "name": "American College of Cardiology Annual Scientific Session",
+                        "acronym": "ACC",
+                        "organizer": "American College of Cardiology",
+                        "focus": "Cardiology",
+                        "cadence": "annual",
+                        "format": "conference"
                       }
                     ]
                   },
@@ -4230,6 +4589,21 @@ window.ATLAS_DATA = {
                           "jcr",
                           "jcr-quartile"
                         ]
+                      }
+                    ],
+                    "conferences": [
+                      {
+                        "illustrative": true,
+                        "metricSourceIds": [
+                          "venue-identity",
+                          "think-check-attend"
+                        ],
+                        "name": "American Academy of Neurology Annual Meeting",
+                        "acronym": "AAN",
+                        "organizer": "American Academy of Neurology",
+                        "focus": "Neurology",
+                        "cadence": "annual",
+                        "format": "conference"
                       }
                     ]
                   },
@@ -4937,6 +5311,21 @@ window.ATLAS_DATA = {
                           "jcr",
                           "jcr-quartile"
                         ]
+                      }
+                    ],
+                    "conferences": [
+                      {
+                        "illustrative": true,
+                        "metricSourceIds": [
+                          "venue-identity",
+                          "think-check-attend"
+                        ],
+                        "name": "Society for Epidemiologic Research Annual Meeting",
+                        "acronym": "SER",
+                        "organizer": "Society for Epidemiologic Research",
+                        "focus": "Epidemiologic research",
+                        "cadence": "annual",
+                        "format": "conference"
                       }
                     ]
                   },
@@ -6434,6 +6823,23 @@ window.ATLAS_DATA = {
                       "jcr-quartile"
                     ]
                   }
+                ],
+                "conferences": [
+                  {
+                    "illustrative": true,
+                    "metricSourceIds": [
+                      "venue-identity",
+                      "dblp",
+                      "core-portal",
+                      "think-check-attend"
+                    ],
+                    "name": "Annual International Conference of the IEEE Engineering in Medicine and Biology Society",
+                    "acronym": "EMBC",
+                    "organizer": "IEEE Engineering in Medicine and Biology Society",
+                    "focus": "Biomedical engineering",
+                    "cadence": "annual",
+                    "format": "conference"
+                  }
                 ]
               },
               {
@@ -7548,6 +7954,21 @@ window.ATLAS_DATA = {
                         ]
                       }
                     ]
+                  }
+                ],
+                "conferences": [
+                  {
+                    "illustrative": true,
+                    "metricSourceIds": [
+                      "venue-identity",
+                      "think-check-attend"
+                    ],
+                    "name": "Joint Statistical Meetings",
+                    "acronym": "JSM",
+                    "organizer": "American Statistical Association and partner societies",
+                    "focus": "Statistics",
+                    "cadence": "annual",
+                    "format": "conference"
                   }
                 ]
               }
@@ -9830,6 +10251,21 @@ window.ATLAS_DATA = {
                       }
                     ]
                   }
+                ],
+                "conferences": [
+                  {
+                    "illustrative": true,
+                    "metricSourceIds": [
+                      "venue-identity",
+                      "think-check-attend"
+                    ],
+                    "name": "Annual Meeting of the Cognitive Science Society",
+                    "acronym": "CogSci",
+                    "organizer": "Cognitive Science Society",
+                    "focus": "Cognitive science",
+                    "cadence": "annual",
+                    "format": "conference"
+                  }
                 ]
               },
               {
@@ -10829,6 +11265,21 @@ window.ATLAS_DATA = {
                   }
                 ]
               }
+            ],
+            "conferences": [
+              {
+                "illustrative": true,
+                "metricSourceIds": [
+                  "venue-identity",
+                  "think-check-attend"
+                ],
+                "name": "American Economic Association Annual Meeting",
+                "acronym": "AEA",
+                "organizer": "American Economic Association",
+                "focus": "Economics",
+                "cadence": "annual",
+                "format": "conference"
+              }
             ]
           },
           {
@@ -11049,6 +11500,21 @@ window.ATLAS_DATA = {
                     ]
                   }
                 ]
+              }
+            ],
+            "conferences": [
+              {
+                "illustrative": true,
+                "metricSourceIds": [
+                  "venue-identity",
+                  "think-check-attend"
+                ],
+                "name": "American Educational Research Association Annual Meeting",
+                "acronym": "AERA",
+                "organizer": "American Educational Research Association",
+                "focus": "Education research",
+                "cadence": "annual",
+                "format": "conference"
               }
             ]
           },
@@ -11285,6 +11751,21 @@ window.ATLAS_DATA = {
                   }
                 ]
               }
+            ],
+            "conferences": [
+              {
+                "illustrative": true,
+                "metricSourceIds": [
+                  "venue-identity",
+                  "think-check-attend"
+                ],
+                "name": "American Political Science Association Annual Meeting",
+                "acronym": "APSA",
+                "organizer": "American Political Science Association",
+                "focus": "Political science",
+                "cadence": "annual",
+                "format": "conference"
+              }
             ]
           },
           {
@@ -11446,6 +11927,21 @@ window.ATLAS_DATA = {
                         ]
                       }
                     ]
+                  }
+                ],
+                "conferences": [
+                  {
+                    "illustrative": true,
+                    "metricSourceIds": [
+                      "venue-identity",
+                      "think-check-attend"
+                    ],
+                    "name": "Academy of Management Annual Meeting",
+                    "acronym": "AOM",
+                    "organizer": "Academy of Management",
+                    "focus": "Management and organization studies",
+                    "cadence": "annual",
+                    "format": "conference"
                   }
                 ]
               },
@@ -12215,6 +12711,21 @@ window.ATLAS_DATA = {
                     ]
                   }
                 ]
+              }
+            ],
+            "conferences": [
+              {
+                "illustrative": true,
+                "metricSourceIds": [
+                  "venue-identity",
+                  "think-check-attend"
+                ],
+                "name": "Association of American Law Schools Annual Meeting",
+                "acronym": "AALS",
+                "organizer": "Association of American Law Schools",
+                "focus": "Legal education and scholarship",
+                "cadence": "annual",
+                "format": "conference"
               }
             ]
           },
@@ -13095,6 +13606,21 @@ window.ATLAS_DATA = {
                   }
                 ]
               }
+            ],
+            "conferences": [
+              {
+                "illustrative": true,
+                "metricSourceIds": [
+                  "venue-identity",
+                  "think-check-attend"
+                ],
+                "name": "American Historical Association Annual Meeting",
+                "acronym": "AHA",
+                "organizer": "American Historical Association",
+                "focus": "Historical research",
+                "cadence": "annual",
+                "format": "conference"
+              }
             ]
           },
           {
@@ -13265,6 +13791,21 @@ window.ATLAS_DATA = {
                 ],
                 "children": []
               }
+            ],
+            "conferences": [
+              {
+                "illustrative": true,
+                "metricSourceIds": [
+                  "venue-identity",
+                  "think-check-attend"
+                ],
+                "name": "Annual Meeting of the Linguistic Society of America",
+                "acronym": "LSA",
+                "organizer": "Linguistic Society of America",
+                "focus": "Linguistics",
+                "cadence": "annual",
+                "format": "conference"
+              }
             ]
           },
           {
@@ -13391,6 +13932,21 @@ window.ATLAS_DATA = {
                   }
                 ],
                 "children": []
+              }
+            ],
+            "conferences": [
+              {
+                "illustrative": true,
+                "metricSourceIds": [
+                  "venue-identity",
+                  "think-check-attend"
+                ],
+                "name": "Philosophy of Science Association Biennial Meeting",
+                "acronym": "PSA",
+                "organizer": "Philosophy of Science Association",
+                "focus": "Philosophy of science",
+                "cadence": "biennial",
+                "format": "conference"
               }
             ]
           },

@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="ATLAS — interactive infographics for academic journal impact factors, quartiles, predatory flags, and deep domain drill-down."
+      content="ATLAS — explore academic journals (impact, quartiles, predatory flags) and conference series (acronym, organizer, cadence, format) by domain. Illustrative snapshot, not a live ranking."
     />
-    <title>ATLAS — Academic Journal Status</title>
+    <title>ATLAS — Journals and conferences</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -41,10 +41,11 @@
         </div>
         <div class="hero-content">
           <p class="brand-lockup" id="hero-brand">ATLAS</p>
-          <h1>Journals mapped by where they actually sit.</h1>
+          <h1>Journals and conferences mapped by where they sit.</h1>
           <p class="hero-lede">
-            Drill into domains, compare impact factors and quartiles, and spot
-            predatory outlets before you submit.
+            Drill into domains, compare journal impact and quartiles, and browse
+            conference series by organizer, cadence, and format. Figures in this
+            snapshot are illustrative.
           </p>
           <div class="hero-cta">
             <a class="btn btn-primary" href="#explore">Explore domains</a>
@@ -57,8 +58,8 @@
         <div class="section-head">
           <h2 id="legend-title">Status at a glance</h2>
           <p>
-            Four signals every researcher needs: impact, quartile, domain fit,
-            and risk.
+            Journal signals — impact, quartile, domain fit, and risk — plus
+            conference series identity. Conference rows are not ranked.
           </p>
         </div>
         <div class="legend-grid">
@@ -113,6 +114,19 @@
               <span>Human</span>
             </div>
           </article>
+          <article class="signal signal-conf">
+            <h3>Conferences</h3>
+            <p>
+              Series identity only: acronym, organizer, cadence, and format.
+              No impact factor, quartile, acceptance rate, or CORE rank is stored.
+              Labels are illustrative.
+            </p>
+            <ul class="pred-list">
+              <li>Annual or biennial</li>
+              <li>Conference, symposium, or workshop</li>
+              <li>Not a ranking</li>
+            </ul>
+          </article>
         </div>
       </section>
 
@@ -121,7 +135,7 @@
           <h2 id="fields-title">All fields</h2>
           <p>
             Full catalog of research fields in this map. Open any field to drill
-            into its journals.
+            into its journals and conferences.
           </p>
         </div>
         <div class="fields-toolbar">
@@ -138,15 +152,30 @@
         <div class="section-head">
           <h2 id="explore-title">Domain explorer</h2>
           <p>
-            Click deeper into subdomains. Filter by quartile, impact, or
-            predatory status.
+            Click deeper into subdomains. Switch between journals and conferences.
+            Journal filters cover quartile, impact, and predatory status.
+            Conference filters cover format and cadence — not ranks.
           </p>
         </div>
 
         <div class="explorer-shell">
           <aside class="explorer-controls" aria-label="Filters">
+            <fieldset class="field" id="venue-filters">
+              <legend>Show</legend>
+              <div class="chip-row">
+                <label class="chip"
+                  ><input type="radio" name="venue" value="journals" checked />
+                  Journals</label
+                >
+                <label class="chip"
+                  ><input type="radio" name="venue" value="conferences" />
+                  Conferences</label
+                >
+              </div>
+            </fieldset>
+
             <label class="field">
-              <span>Search journals</span>
+              <span id="search-label">Search journals</span>
               <input
                 id="search"
                 type="search"
@@ -155,58 +184,96 @@
               />
             </label>
 
-            <fieldset class="field">
-              <legend>Quartile</legend>
-              <div class="chip-row" id="quartile-filters">
-                <label class="chip"
-                  ><input type="checkbox" value="Q1" checked /> Q1</label
-                >
-                <label class="chip"
-                  ><input type="checkbox" value="Q2" checked /> Q2</label
-                >
-                <label class="chip"
-                  ><input type="checkbox" value="Q3" checked /> Q3</label
-                >
-                <label class="chip"
-                  ><input type="checkbox" value="Q4" checked /> Q4</label
-                >
-              </div>
-            </fieldset>
+            <div id="journal-filters" class="venue-filters">
+              <fieldset class="field">
+                <legend>Quartile</legend>
+                <div class="chip-row" id="quartile-filters">
+                  <label class="chip"
+                    ><input type="checkbox" value="Q1" checked /> Q1</label
+                  >
+                  <label class="chip"
+                    ><input type="checkbox" value="Q2" checked /> Q2</label
+                  >
+                  <label class="chip"
+                    ><input type="checkbox" value="Q3" checked /> Q3</label
+                  >
+                  <label class="chip"
+                    ><input type="checkbox" value="Q4" checked /> Q4</label
+                  >
+                </div>
+              </fieldset>
 
-            <label class="field">
-              <span>Min impact factor · <strong id="if-label">0</strong></span>
-              <input
-                id="if-min"
-                type="range"
-                min="0"
-                max="100"
-                step="0.5"
-                value="0"
-              />
-            </label>
+              <label class="field">
+                <span>Min impact factor · <strong id="if-label">0</strong></span>
+                <input
+                  id="if-min"
+                  type="range"
+                  min="0"
+                  max="100"
+                  step="0.5"
+                  value="0"
+                />
+              </label>
 
-            <fieldset class="field">
-              <legend>Predatory</legend>
-              <div class="chip-row" id="pred-filters">
-                <label class="chip"
-                  ><input
-                    type="radio"
-                    name="pred"
-                    value="all"
-                    checked
-                  />
-                  All</label
-                >
-                <label class="chip"
-                  ><input type="radio" name="pred" value="safe" /> Hide
-                  predatory</label
-                >
-                <label class="chip"
-                  ><input type="radio" name="pred" value="only" /> Predators
-                  only</label
-                >
-              </div>
-            </fieldset>
+              <fieldset class="field">
+                <legend>Predatory</legend>
+                <div class="chip-row" id="pred-filters">
+                  <label class="chip"
+                    ><input
+                      type="radio"
+                      name="pred"
+                      value="all"
+                      checked
+                    />
+                    All</label
+                  >
+                  <label class="chip"
+                    ><input type="radio" name="pred" value="safe" /> Hide
+                    predatory</label
+                  >
+                  <label class="chip"
+                    ><input type="radio" name="pred" value="only" /> Predators
+                    only</label
+                  >
+                </div>
+              </fieldset>
+            </div>
+
+            <div id="conference-filters" class="venue-filters" hidden>
+              <fieldset class="field">
+                <legend>Format</legend>
+                <div class="chip-row" id="format-filters">
+                  <label class="chip"
+                    ><input type="checkbox" value="conference" checked />
+                    Conference</label
+                  >
+                  <label class="chip"
+                    ><input type="checkbox" value="symposium" checked />
+                    Symposium</label
+                  >
+                  <label class="chip"
+                    ><input type="checkbox" value="workshop" checked />
+                    Workshop</label
+                  >
+                </div>
+              </fieldset>
+              <fieldset class="field">
+                <legend>Cadence</legend>
+                <div class="chip-row" id="cadence-filters">
+                  <label class="chip"
+                    ><input type="checkbox" value="annual" checked /> Annual</label
+                  >
+                  <label class="chip"
+                    ><input type="checkbox" value="biennial" checked />
+                    Biennial</label
+                  >
+                </div>
+              </fieldset>
+              <p class="filter-note">
+                Format and cadence are illustrative labels. No CORE, JCR, or
+                Scopus rank is stored.
+              </p>
+            </div>
 
             <div class="stats-card" id="scope-stats" aria-live="polite"></div>
           </aside>
@@ -218,14 +285,14 @@
 
             <div class="viz-row">
               <figure class="viz-panel">
-                <figcaption>Quartile mix in scope</figcaption>
+                <figcaption id="mix-caption">Quartile mix in scope</figcaption>
                 <div class="donut-wrap">
                   <canvas id="quartile-chart" width="220" height="220"></canvas>
                   <div class="donut-center" id="donut-center"></div>
                 </div>
               </figure>
               <figure class="viz-panel viz-bars">
-                <figcaption>Impact factor distribution</figcaption>
+                <figcaption id="dist-caption">Impact factor distribution</figcaption>
                 <div id="if-bars" class="if-bars" role="img" aria-label="Impact factor histogram"></div>
               </figure>
             </div>
@@ -251,8 +318,9 @@
         <div class="section-head">
           <h2 id="health-title">Domain health</h2>
           <p>
-            Research fields ranked by mean impact and predatory density in this
-            illustrative map.
+            Research fields ranked by mean journal impact and predatory density
+            in this illustrative map. Conference counts sit beside a field and
+            are not a rank.
           </p>
         </div>
         <div class="health-chart" id="health-chart"></div>

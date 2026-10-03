@@ -24,7 +24,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Validate journal dataset
+      - name: Validate dataset
         run: node scripts/validate-data.mjs
 
       - name: Setup Pages

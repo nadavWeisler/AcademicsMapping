@@ -18,7 +18,7 @@ jobs:
         with:
           node-version: "22"
 
-      - name: Validate journal dataset
+      - name: Validate dataset
         run: npm run validate
 
       - name: Syntax-check scripts and app

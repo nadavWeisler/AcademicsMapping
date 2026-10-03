@@ -1,7 +1,7 @@
 {
   "name": "journals-mapping-atlas",
   "private": true,
-  "description": "ATLAS — static academic journal status infographics for GitHub Pages",
+  "description": "ATLAS — static academic journal and conference explorer for GitHub Pages",
   "scripts": {
     "validate": "node scripts/validate-data.mjs",
     "validate:strict": "node scripts/validate-data.mjs --strict",

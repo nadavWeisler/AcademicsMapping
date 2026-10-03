@@ -1,12 +1,15 @@
-# JournalsMapping / ATLAS
+# AcademicsMapping / ATLAS
 
-Interactive static site for exploring academic journal status by domain:
+Interactive static site for exploring academic journals and conferences by domain:
 
-- **Impact factor** comparison with distribution charts
-- **Quartiles** (Q1–Q4) with filters and donut mix
-- **Predatory** journal flags and risk filters
-- **Deep domain drill-down** across STM, social sciences, and humanities
+- **Journals — impact factor** comparison with distribution charts (illustrative)
+- **Journals — quartiles** (Q1–Q4) with filters and donut mix (illustrative)
+- **Journals — predatory** flags and risk filters (educational composites)
+- **Conferences — series identity**: acronym, organizer, cadence (annual or biennial), and format (conference, symposium, or workshop)
+- **Deep domain drill-down** across STM, social sciences, and humanities, shared by both
 - **Clear data provenance** (local `data.js` + linked primary databases)
+
+Conference rows do **not** include journal quartiles, predatory flags, acceptance rates, or CORE / JCR / Scopus ranks. Format and cadence are illustrative labels for navigation, not a ranking.
 
 ## Local preview
 
@@ -23,14 +26,14 @@ npm run coverage          # merge coverage JSON expansions + validate
 npm run expand            # full rebuild helpers + coverage + validate
 ```
 
-Dataset scale (illustrative snapshot): **~850 journals** across **~300 domains**, with an on-page **All fields** catalog.
+Dataset scale (illustrative snapshot): **~850 journals** and a **modest conference set** across **~300 domains**, with an on-page **All fields** catalog. The conference list is a handful of widely known series placed in the existing tree so drill-down and filters have something to show — not a ranking database.
 
 ## GitHub Pages
 
 Deploys `public/` via [`.github/workflows/deploy-pages.yml`](.github/workflows/deploy-pages.yml) (includes dataset validation).
 
 1. **Settings → Pages → Source = GitHub Actions** (or rely on workflow `enablement: true`)
-2. Site URL (typical): `https://<user>.github.io/JournalsMapping/`
+2. Site URL (typical): `https://<user>.github.io/AcademicsMapping/`
 
 ## Data sources
 
@@ -38,12 +41,16 @@ Deploys `public/` via [`.github/workflows/deploy-pages.yml`](.github/workflows/d
 
 | Field | Verify / origin |
 |---|---|
-| Impact Factor | [Clarivate JCR](https://jcr.clarivate.com/) |
-| Quartiles | JCR category rank; [Scopus](https://www.scopus.com/) / [SCImago](https://www.scimagojr.com/) |
-| Open access | [DOAJ](https://doaj.org/) |
-| Predatory risk | [Think. Check. Submit.](https://thinkchecksubmit.org/) |
-| ISSN | [ISSN portal](https://portal.issn.org/) |
+| Journals: Impact Factor | [Clarivate JCR](https://jcr.clarivate.com/) |
+| Journals: Quartiles | JCR category rank; [Scopus](https://www.scopus.com/) / [SCImago](https://www.scimagojr.com/) |
+| Journals: Open access | [DOAJ](https://doaj.org/) |
+| Journals: Predatory risk | [Think. Check. Submit.](https://thinkchecksubmit.org/) |
+| Journals: ISSN | [ISSN portal](https://portal.issn.org/) |
+| Conferences: identity | Organizer / society pages. This snapshot stores illustrative labels only. |
+| Conferences: computing record | [dblp](https://dblp.org/) — series lookup; citation counts are not copied |
+| Conferences: ranks | [CORE Conference Portal](https://portal.core.edu.au/conf-ranks/) — **not stored** here |
+| Conferences: quality checks | [Think. Check. Attend.](https://thinkchecksubmit.org/think-check-attend/) |
 
 Details: [`public/docs/DATA_SOURCES.md`](public/docs/DATA_SOURCES.md).
 
-Snapshot metrics are **illustrative**—not a live Clarivate/Scopus API pull.
+Snapshot metrics are **illustrative** — not a live Clarivate, Scopus, or CORE pull. Conference numbers you might expect (CORE rank, acceptance rate, citations) are omitted on purpose.
